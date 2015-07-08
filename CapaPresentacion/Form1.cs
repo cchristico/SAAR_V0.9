@@ -120,16 +120,6 @@ namespace CapaPresentacion
         
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DatoEliminar = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtArComTipo.Text= dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtArComNombre.Text= dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-           // btnIngresar.Enabled = false;
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string message = "Desea Eliminar: " + txtArComNombre.Text.ToString();
@@ -180,6 +170,16 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             timer.Start();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            DatoEliminar = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtArComTipo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtArComNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
         }
 
         
