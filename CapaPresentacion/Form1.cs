@@ -127,7 +127,7 @@ namespace CapaPresentacion
             txtArComNombre.Text= dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            btnIngresar.Enabled = false;
+           // btnIngresar.Enabled = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -181,6 +181,8 @@ namespace CapaPresentacion
         {
             timer.Start();
         }
+
+        
         
         }
  
