@@ -58,6 +58,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.splitContainer31 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer28 = new System.Windows.Forms.SplitContainer();
@@ -144,8 +146,7 @@
             this.aCTIVOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter();
             this.aREACOMUNTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter();
-            this.splitContainer31 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -179,6 +180,11 @@
             this.splitContainer27.Panel1.SuspendLayout();
             this.splitContainer27.Panel2.SuspendLayout();
             this.splitContainer27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).BeginInit();
+            this.splitContainer31.Panel1.SuspendLayout();
+            this.splitContainer31.Panel2.SuspendLayout();
+            this.splitContainer31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -284,10 +290,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).BeginInit();
-            this.splitContainer31.Panel1.SuspendLayout();
-            this.splitContainer31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -639,6 +642,35 @@
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(0, 23);
             this.lblDate.TabIndex = 0;
+            // 
+            // splitContainer31
+            // 
+            this.splitContainer31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer31.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer31.Name = "splitContainer31";
+            this.splitContainer31.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer31.Panel1
+            // 
+            this.splitContainer31.Panel1.Controls.Add(this.dataGridView1);
+            // 
+            // splitContainer31.Panel2
+            // 
+            this.splitContainer31.Panel2.Controls.Add(this.dataGridView6);
+            this.splitContainer31.Size = new System.Drawing.Size(546, 502);
+            this.splitContainer31.SplitterDistance = 182;
+            this.splitContainer31.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(546, 182);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // tabPage2
             // 
@@ -1561,30 +1593,14 @@
             // 
             this.aREACOMUNTableAdapter.ClearBeforeFill = true;
             // 
-            // splitContainer31
+            // dataGridView6
             // 
-            this.splitContainer31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer31.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer31.Name = "splitContainer31";
-            this.splitContainer31.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer31.Panel1
-            // 
-            this.splitContainer31.Panel1.Controls.Add(this.dataGridView1);
-            this.splitContainer31.Size = new System.Drawing.Size(546, 502);
-            this.splitContainer31.SplitterDistance = 182;
-            this.splitContainer31.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 182);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(546, 316);
+            this.dataGridView6.TabIndex = 0;
             // 
             // Form1
             // 
@@ -1631,6 +1647,11 @@
             this.splitContainer27.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer27)).EndInit();
             this.splitContainer27.ResumeLayout(false);
+            this.splitContainer31.Panel1.ResumeLayout(false);
+            this.splitContainer31.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).EndInit();
+            this.splitContainer31.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -1739,10 +1760,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).EndInit();
-            this.splitContainer31.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).EndInit();
-            this.splitContainer31.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1865,6 +1883,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.SplitContainer splitContainer31;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView6;
 
     }
 }
