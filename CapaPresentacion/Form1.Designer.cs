@@ -37,6 +37,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtArComOper = new System.Windows.Forms.TextBox();
             this.txtArComAforo = new System.Windows.Forms.TextBox();
             this.txtArComNombre = new System.Windows.Forms.TextBox();
@@ -136,13 +137,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.aREACOMUNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sARRDataSet = new SARR.Presentacion.SARRDataSet();
             this.aREACOMUNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter();
             this.aREACOMUNTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -376,6 +378,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtArComOper);
             this.groupBox1.Controls.Add(this.txtArComAforo);
             this.groupBox1.Controls.Add(this.txtArComNombre);
@@ -392,6 +396,15 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area Comun";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 20);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Activos:";
             // 
             // txtArComOper
             // 
@@ -1515,6 +1528,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte:";
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // aREACOMUNBindingSource1
             // 
             this.aREACOMUNBindingSource1.DataMember = "AREACOMUN";
@@ -1543,9 +1560,13 @@
             // 
             this.aREACOMUNTableAdapter.ClearBeforeFill = true;
             // 
-            // timer
+            // comboBox3
             // 
-            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(123, 150);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 28);
+            this.comboBox3.TabIndex = 9;
             // 
             // Form1
             // 
@@ -1820,6 +1841,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MonthCalendar mntCalendar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox3;
 
     }
 }
