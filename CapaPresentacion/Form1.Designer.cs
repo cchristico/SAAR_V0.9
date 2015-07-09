@@ -36,15 +36,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtArComOper = new System.Windows.Forms.TextBox();
-            this.txtArComAforo = new System.Windows.Forms.TextBox();
-            this.txtArComNombre = new System.Windows.Forms.TextBox();
-            this.txtArComTipo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -104,10 +95,6 @@
             this.btnReEli = new System.Windows.Forms.Button();
             this.TabActivos = new System.Windows.Forms.TabPage();
             this.splitContainer19 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer20 = new System.Windows.Forms.SplitContainer();
             this.btbAcGen = new System.Windows.Forms.Button();
             this.splitContainer21 = new System.Windows.Forms.SplitContainer();
@@ -146,6 +133,18 @@
             this.aREACOMUNTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter();
             this.splitContainer32 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.splitContainer33 = new System.Windows.Forms.SplitContainer();
+            this.pnpPanel = new System.Windows.Forms.GroupBox();
+            this.splitContainer34 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtArComOper = new System.Windows.Forms.TextBox();
+            this.txtArComAforo = new System.Windows.Forms.TextBox();
+            this.txtArComNombre = new System.Windows.Forms.TextBox();
+            this.txtArComTipo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -168,7 +167,6 @@
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -258,7 +256,6 @@
             this.splitContainer19.Panel1.SuspendLayout();
             this.splitContainer19.Panel2.SuspendLayout();
             this.splitContainer19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer20)).BeginInit();
             this.splitContainer20.Panel1.SuspendLayout();
             this.splitContainer20.Panel2.SuspendLayout();
@@ -300,6 +297,14 @@
             this.splitContainer32.Panel1.SuspendLayout();
             this.splitContainer32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer33)).BeginInit();
+            this.splitContainer33.Panel1.SuspendLayout();
+            this.splitContainer33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer34)).BeginInit();
+            this.splitContainer34.Panel1.SuspendLayout();
+            this.splitContainer34.Panel2.SuspendLayout();
+            this.splitContainer34.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -384,8 +389,7 @@
             // 
             // splitContainer7.Panel1
             // 
-            this.splitContainer7.Panel1.Controls.Add(this.groupBox3);
-            this.splitContainer7.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer7.Panel1.Controls.Add(this.splitContainer34);
             // 
             // splitContainer7.Panel2
             // 
@@ -393,104 +397,6 @@
             this.splitContainer7.Size = new System.Drawing.Size(655, 388);
             this.splitContainer7.SplitterDistance = 389;
             this.splitContainer7.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtArComOper);
-            this.groupBox1.Controls.Add(this.txtArComAforo);
-            this.groupBox1.Controls.Add(this.txtArComNombre);
-            this.groupBox1.Controls.Add(this.txtArComTipo);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox1.Location = new System.Drawing.Point(3, 18);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 191);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Area Comun";
-            // 
-            // txtArComOper
-            // 
-            this.txtArComOper.Location = new System.Drawing.Point(120, 109);
-            this.txtArComOper.MaxLength = 1;
-            this.txtArComOper.Name = "txtArComOper";
-            this.txtArComOper.Size = new System.Drawing.Size(198, 26);
-            this.txtArComOper.TabIndex = 7;
-            // 
-            // txtArComAforo
-            // 
-            this.txtArComAforo.Location = new System.Drawing.Point(120, 82);
-            this.txtArComAforo.MaxLength = 4;
-            this.txtArComAforo.Name = "txtArComAforo";
-            this.txtArComAforo.Size = new System.Drawing.Size(198, 26);
-            this.txtArComAforo.TabIndex = 6;
-            this.txtArComAforo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtArComAforo_KeyPress);
-            // 
-            // txtArComNombre
-            // 
-            this.txtArComNombre.Location = new System.Drawing.Point(120, 51);
-            this.txtArComNombre.MaxLength = 40;
-            this.txtArComNombre.Name = "txtArComNombre";
-            this.txtArComNombre.Size = new System.Drawing.Size(198, 26);
-            this.txtArComNombre.TabIndex = 5;
-            this.txtArComNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtArComNombre_KeyPress);
-            // 
-            // txtArComTipo
-            // 
-            this.txtArComTipo.Location = new System.Drawing.Point(120, 23);
-            this.txtArComTipo.MaxLength = 40;
-            this.txtArComTipo.Name = "txtArComTipo";
-            this.txtArComTipo.Size = new System.Drawing.Size(198, 26);
-            this.txtArComTipo.TabIndex = 4;
-            this.txtArComTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtArComTipo_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(9, 54);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Nombre:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(9, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Operabilidad:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(9, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tipo :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(9, 85);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 18);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Aforo:";
             // 
             // splitContainer4
             // 
@@ -1178,42 +1084,14 @@
             // 
             // splitContainer19.Panel1
             // 
-            this.splitContainer19.Panel1.Controls.Add(this.dataGridView4);
+            this.splitContainer19.Panel1.Controls.Add(this.splitContainer33);
             // 
             // splitContainer19.Panel2
             // 
             this.splitContainer19.Panel2.Controls.Add(this.splitContainer20);
             this.splitContainer19.Size = new System.Drawing.Size(1205, 502);
-            this.splitContainer19.SplitterDistance = 368;
+            this.splitContainer19.SplitterDistance = 406;
             this.splitContainer19.TabIndex = 0;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column12,
-            this.Column13,
-            this.Column14});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(1205, 368);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "ID";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Tipo";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Cantidad";
-            this.Column14.Name = "Column14";
             // 
             // splitContainer20
             // 
@@ -1228,14 +1106,14 @@
             // splitContainer20.Panel2
             // 
             this.splitContainer20.Panel2.Controls.Add(this.splitContainer21);
-            this.splitContainer20.Size = new System.Drawing.Size(1205, 130);
+            this.splitContainer20.Size = new System.Drawing.Size(1205, 92);
             this.splitContainer20.SplitterDistance = 280;
             this.splitContainer20.TabIndex = 0;
             // 
             // btbAcGen
             // 
             this.btbAcGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbAcGen.Location = new System.Drawing.Point(29, 18);
+            this.btbAcGen.Location = new System.Drawing.Point(61, 18);
             this.btbAcGen.Name = "btbAcGen";
             this.btbAcGen.Size = new System.Drawing.Size(102, 29);
             this.btbAcGen.TabIndex = 1;
@@ -1255,14 +1133,14 @@
             // splitContainer21.Panel2
             // 
             this.splitContainer21.Panel2.Controls.Add(this.splitContainer22);
-            this.splitContainer21.Size = new System.Drawing.Size(921, 130);
+            this.splitContainer21.Size = new System.Drawing.Size(921, 92);
             this.splitContainer21.SplitterDistance = 307;
             this.splitContainer21.TabIndex = 0;
             // 
             // btbAcGuar
             // 
             this.btbAcGuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbAcGuar.Location = new System.Drawing.Point(36, 18);
+            this.btbAcGuar.Location = new System.Drawing.Point(71, 18);
             this.btbAcGuar.Name = "btbAcGuar";
             this.btbAcGuar.Size = new System.Drawing.Size(102, 29);
             this.btbAcGuar.TabIndex = 1;
@@ -1282,14 +1160,14 @@
             // splitContainer22.Panel2
             // 
             this.splitContainer22.Panel2.Controls.Add(this.btbAcElim);
-            this.splitContainer22.Size = new System.Drawing.Size(610, 130);
+            this.splitContainer22.Size = new System.Drawing.Size(610, 92);
             this.splitContainer22.SplitterDistance = 278;
             this.splitContainer22.TabIndex = 0;
             // 
             // btbAcCan
             // 
             this.btbAcCan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbAcCan.Location = new System.Drawing.Point(28, 18);
+            this.btbAcCan.Location = new System.Drawing.Point(69, 18);
             this.btbAcCan.Name = "btbAcCan";
             this.btbAcCan.Size = new System.Drawing.Size(102, 29);
             this.btbAcCan.TabIndex = 1;
@@ -1608,6 +1486,143 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // splitContainer33
+            // 
+            this.splitContainer33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer33.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer33.Name = "splitContainer33";
+            // 
+            // splitContainer33.Panel1
+            // 
+            this.splitContainer33.Panel1.Controls.Add(this.pnpPanel);
+            this.splitContainer33.Size = new System.Drawing.Size(1205, 406);
+            this.splitContainer33.SplitterDistance = 567;
+            this.splitContainer33.TabIndex = 0;
+            // 
+            // pnpPanel
+            // 
+            this.pnpPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnpPanel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnpPanel.Location = new System.Drawing.Point(15, 16);
+            this.pnpPanel.Name = "pnpPanel";
+            this.pnpPanel.Size = new System.Drawing.Size(200, 100);
+            this.pnpPanel.TabIndex = 0;
+            this.pnpPanel.TabStop = false;
+            this.pnpPanel.Text = "Activo:";
+            // 
+            // splitContainer34
+            // 
+            this.splitContainer34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer34.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer34.Name = "splitContainer34";
+            this.splitContainer34.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer34.Panel1
+            // 
+            this.splitContainer34.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer34.Panel2
+            // 
+            this.splitContainer34.Panel2.Controls.Add(this.groupBox3);
+            this.splitContainer34.Size = new System.Drawing.Size(389, 388);
+            this.splitContainer34.SplitterDistance = 202;
+            this.splitContainer34.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtArComOper);
+            this.groupBox1.Controls.Add(this.txtArComAforo);
+            this.groupBox1.Controls.Add(this.txtArComNombre);
+            this.groupBox1.Controls.Add(this.txtArComTipo);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox1.Location = new System.Drawing.Point(3, 19);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(383, 171);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Area Comun";
+            // 
+            // txtArComOper
+            // 
+            this.txtArComOper.Location = new System.Drawing.Point(120, 109);
+            this.txtArComOper.MaxLength = 1;
+            this.txtArComOper.Name = "txtArComOper";
+            this.txtArComOper.Size = new System.Drawing.Size(198, 26);
+            this.txtArComOper.TabIndex = 7;
+            // 
+            // txtArComAforo
+            // 
+            this.txtArComAforo.Location = new System.Drawing.Point(120, 82);
+            this.txtArComAforo.MaxLength = 4;
+            this.txtArComAforo.Name = "txtArComAforo";
+            this.txtArComAforo.Size = new System.Drawing.Size(198, 26);
+            this.txtArComAforo.TabIndex = 6;
+            // 
+            // txtArComNombre
+            // 
+            this.txtArComNombre.Location = new System.Drawing.Point(120, 51);
+            this.txtArComNombre.MaxLength = 40;
+            this.txtArComNombre.Name = "txtArComNombre";
+            this.txtArComNombre.Size = new System.Drawing.Size(198, 26);
+            this.txtArComNombre.TabIndex = 5;
+            // 
+            // txtArComTipo
+            // 
+            this.txtArComTipo.Location = new System.Drawing.Point(120, 23);
+            this.txtArComTipo.MaxLength = 40;
+            this.txtArComTipo.Name = "txtArComTipo";
+            this.txtArComTipo.Size = new System.Drawing.Size(198, 26);
+            this.txtArComTipo.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(9, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Nombre:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(9, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Operabilidad:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(9, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tipo :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(9, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 18);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Aforo:";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox2);
@@ -1618,10 +1633,10 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox3.Location = new System.Drawing.Point(4, 219);
+            this.groupBox3.Location = new System.Drawing.Point(3, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(383, 191);
-            this.groupBox3.TabIndex = 8;
+            this.groupBox3.Size = new System.Drawing.Size(383, 166);
+            this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activos";
             // 
@@ -1631,7 +1646,7 @@
             this.textBox2.MaxLength = 4;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 84);
+            this.textBox2.Size = new System.Drawing.Size(198, 78);
             this.textBox2.TabIndex = 6;
             // 
             // textBox3
@@ -1708,8 +1723,6 @@
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             this.splitContainer4.Panel2.PerformLayout();
@@ -1802,7 +1815,6 @@
             this.splitContainer19.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer19)).EndInit();
             this.splitContainer19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.splitContainer20.Panel1.ResumeLayout(false);
             this.splitContainer20.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer20)).EndInit();
@@ -1845,6 +1857,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer32)).EndInit();
             this.splitContainer32.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.splitContainer33.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer33)).EndInit();
+            this.splitContainer33.ResumeLayout(false);
+            this.splitContainer34.Panel1.ResumeLayout(false);
+            this.splitContainer34.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer34)).EndInit();
+            this.splitContainer34.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -1879,7 +1900,6 @@
         private System.Windows.Forms.Button btnReEli;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.SplitContainer splitContainer19;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.SplitContainer splitContainer20;
         private System.Windows.Forms.Button btbAcGen;
         private System.Windows.Forms.SplitContainer splitContainer21;
@@ -1902,9 +1922,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
@@ -1934,15 +1951,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.SplitContainer splitContainer7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtArComOper;
-        private System.Windows.Forms.TextBox txtArComAforo;
-        private System.Windows.Forms.TextBox txtArComNombre;
-        private System.Windows.Forms.TextBox txtArComTipo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.SplitContainer splitContainer27;
@@ -1969,6 +1977,18 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.SplitContainer splitContainer32;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.SplitContainer splitContainer33;
+        private System.Windows.Forms.GroupBox pnpPanel;
+        private System.Windows.Forms.SplitContainer splitContainer34;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtArComOper;
+        private System.Windows.Forms.TextBox txtArComAforo;
+        private System.Windows.Forms.TextBox txtArComNombre;
+        private System.Windows.Forms.TextBox txtArComTipo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
