@@ -37,8 +37,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtArComOper = new System.Windows.Forms.TextBox();
             this.txtArComAforo = new System.Windows.Forms.TextBox();
             this.txtArComNombre = new System.Windows.Forms.TextBox();
@@ -47,7 +45,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -60,6 +57,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.splitContainer31 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer28 = new System.Windows.Forms.SplitContainer();
@@ -146,7 +144,15 @@
             this.aCTIVOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter();
             this.aREACOMUNTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.splitContainer32 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -163,7 +169,6 @@
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -185,6 +190,7 @@
             this.splitContainer31.Panel2.SuspendLayout();
             this.splitContainer31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -290,7 +296,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer32)).BeginInit();
+            this.splitContainer32.Panel1.SuspendLayout();
+            this.splitContainer32.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -363,7 +373,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer2.Size = new System.Drawing.Size(655, 502);
-            this.splitContainer2.SplitterDistance = 286;
+            this.splitContainer2.SplitterDistance = 388;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer7
@@ -374,19 +384,18 @@
             // 
             // splitContainer7.Panel1
             // 
+            this.splitContainer7.Panel1.Controls.Add(this.groupBox3);
             this.splitContainer7.Panel1.Controls.Add(this.groupBox1);
             // 
             // splitContainer7.Panel2
             // 
-            this.splitContainer7.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer7.Size = new System.Drawing.Size(655, 286);
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer32);
+            this.splitContainer7.Size = new System.Drawing.Size(655, 388);
             this.splitContainer7.SplitterDistance = 389;
             this.splitContainer7.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtArComOper);
             this.groupBox1.Controls.Add(this.txtArComAforo);
             this.groupBox1.Controls.Add(this.txtArComNombre);
@@ -403,23 +412,6 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area Comun";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(123, 150);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 153);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 20);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Activos:";
             // 
             // txtArComOper
             // 
@@ -500,17 +492,6 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Aforo:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::SARR.Presentacion.Properties.Resources.Veranda_Community_featured;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 286);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -526,8 +507,8 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.lblTime);
             this.splitContainer4.Panel2.Controls.Add(this.lblDate);
-            this.splitContainer4.Size = new System.Drawing.Size(655, 212);
-            this.splitContainer4.SplitterDistance = 77;
+            this.splitContainer4.Size = new System.Drawing.Size(655, 110);
+            this.splitContainer4.SplitterDistance = 81;
             this.splitContainer4.TabIndex = 0;
             // 
             // splitContainer8
@@ -543,7 +524,7 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer8.Size = new System.Drawing.Size(655, 77);
+            this.splitContainer8.Size = new System.Drawing.Size(655, 81);
             this.splitContainer8.SplitterDistance = 154;
             this.splitContainer8.TabIndex = 0;
             // 
@@ -571,7 +552,7 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer27);
-            this.splitContainer9.Size = new System.Drawing.Size(497, 77);
+            this.splitContainer9.Size = new System.Drawing.Size(497, 81);
             this.splitContainer9.SplitterDistance = 156;
             this.splitContainer9.TabIndex = 0;
             // 
@@ -599,7 +580,7 @@
             // splitContainer27.Panel2
             // 
             this.splitContainer27.Panel2.Controls.Add(this.btnCancelar);
-            this.splitContainer27.Size = new System.Drawing.Size(337, 77);
+            this.splitContainer27.Size = new System.Drawing.Size(337, 81);
             this.splitContainer27.SplitterDistance = 157;
             this.splitContainer27.TabIndex = 0;
             // 
@@ -658,7 +639,7 @@
             // 
             this.splitContainer31.Panel2.Controls.Add(this.dataGridView6);
             this.splitContainer31.Size = new System.Drawing.Size(546, 502);
-            this.splitContainer31.SplitterDistance = 182;
+            this.splitContainer31.SplitterDistance = 255;
             this.splitContainer31.TabIndex = 0;
             // 
             // dataGridView1
@@ -668,9 +649,18 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 255);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(546, 243);
+            this.dataGridView6.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -1593,14 +1583,105 @@
             // 
             this.aREACOMUNTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView6
+            // splitContainer32
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(546, 316);
-            this.dataGridView6.TabIndex = 0;
+            this.splitContainer32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer32.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer32.Name = "splitContainer32";
+            this.splitContainer32.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer32.Panel1
+            // 
+            this.splitContainer32.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer32.Size = new System.Drawing.Size(262, 388);
+            this.splitContainer32.SplitterDistance = 304;
+            this.splitContainer32.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::SARR.Presentacion.Properties.Resources.Veranda_Community_featured;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 304);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox3.Location = new System.Drawing.Point(4, 219);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(383, 191);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Activos";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(120, 82);
+            this.textBox2.MaxLength = 4;
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 84);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(120, 51);
+            this.textBox3.MaxLength = 40;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(198, 26);
+            this.textBox3.TabIndex = 5;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(120, 23);
+            this.textBox4.MaxLength = 40;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(198, 26);
+            this.textBox4.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(9, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 18);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Cantidad:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(11, 90);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 18);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Observaciones:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(9, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 18);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Nombre:";
             // 
             // Form1
             // 
@@ -1629,7 +1710,6 @@
             this.splitContainer7.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             this.splitContainer4.Panel2.PerformLayout();
@@ -1652,6 +1732,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).EndInit();
             this.splitContainer31.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -1760,7 +1841,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.splitContainer32.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer32)).EndInit();
+            this.splitContainer32.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1861,7 +1947,6 @@
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.SplitContainer splitContainer27;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer28;
         private System.Windows.Forms.SplitContainer splitContainer5;
@@ -1879,11 +1964,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MonthCalendar mntCalendar;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.SplitContainer splitContainer31;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.SplitContainer splitContainer32;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
 
     }
 }
