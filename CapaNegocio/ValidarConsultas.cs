@@ -45,5 +45,15 @@ namespace SAAR.Negocio
             cst.counsultaTodoTipo("update AREACOMUN set TIPO ='"+tipo+"', NOMBREAREA='"+nombreArea+"',AFORO="+aforo+",DISPONIBILIDAD='"+disponibilidad+"' where IDAREACOMUN="+ID);
            
         }
-    }
+       /*Consulta NumExistente*/
+     /*   public void cantAct(string IdActi)
+        { 
+            
+        }*/
+       /*Activo area comun*/
+        public void ingActAreaCoun(string idActivo, string idArCom, string cant)
+        {
+            cst.counsultaTodoTipo("insert into EXISTENCIAS values(" + idActivo.Trim() + "," +idArCom.Trim()+ "," + cant.Trim()+ ")");
+        }
+    }   
 }

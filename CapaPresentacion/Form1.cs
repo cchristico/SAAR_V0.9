@@ -169,6 +169,18 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet8.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet7.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet5.EXISTENCIAS' Puede moverla o quitarla según sea necesario.
+            
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet4.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet3.MANTENIMIENTO' Puede moverla o quitarla según sea necesario.
+            this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet2.PERSONAL' Puede moverla o quitarla según sea necesario.
+            this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
             timer.Start();
         }
 
@@ -180,7 +192,18 @@ namespace CapaPresentacion
             txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
+            DataTable DT = cts.consultar("select ac.NOMBREACTIVO as ACTIVOS, ex.CANTIDAD,ac.OBSERVACION from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+            dataGridView6.DataSource = DT;
+
         }
+
+        private void btnInsAct_Click(object sender, EventArgs e)
+        {
+
+            valCons.ingActAreaCoun("2", DatoEliminar, txtCant.Text.ToString());
+        }
+
+        
 
         
         

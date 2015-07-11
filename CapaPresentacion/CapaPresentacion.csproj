@@ -66,6 +66,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SARRDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SARRDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SARRDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SARRDataSet8.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +120,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\SARR.Presentacion.SARRDataSet5TableAdapters.DataTable1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\SARR.Presentacion.SARRDataSet5TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\SARR.Presentacion.SARRDataSet5TableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +142,94 @@
     </None>
     <None Include="SARRDataSet.xss">
       <DependentUpon>SARRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet1.xsc">
+      <DependentUpon>SARRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet1.xss">
+      <DependentUpon>SARRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet2.xsc">
+      <DependentUpon>SARRDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet2.xss">
+      <DependentUpon>SARRDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet3.xsc">
+      <DependentUpon>SARRDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet3.xss">
+      <DependentUpon>SARRDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet4.xsc">
+      <DependentUpon>SARRDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet4.xss">
+      <DependentUpon>SARRDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet5.xsc">
+      <DependentUpon>SARRDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet5.xss">
+      <DependentUpon>SARRDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet6.xsc">
+      <DependentUpon>SARRDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet6.xss">
+      <DependentUpon>SARRDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet7.xsc">
+      <DependentUpon>SARRDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet7.xss">
+      <DependentUpon>SARRDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet8.xsc">
+      <DependentUpon>SARRDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SARRDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SARRDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SARRDataSet8.xss">
+      <DependentUpon>SARRDataSet8.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
