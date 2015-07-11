@@ -47,6 +47,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnInsAct = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -66,10 +68,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.splitContainer31 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aREACOMUNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sARRDataSet = new SARR.Presentacion.SARRDataSet();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer28 = new System.Windows.Forms.SplitContainer();
@@ -88,12 +87,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDPERSONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mANTENIMIENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sARRDataSet3 = new SARR.Presentacion.SARRDataSet3();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
@@ -150,6 +143,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.aREACOMUNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sARRDataSet = new SARR.Presentacion.SARRDataSet();
+            this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aREACOMUNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -165,14 +161,25 @@
             this.eXISTENCIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sARRDataSet6 = new SARR.Presentacion.SARRDataSet6();
             this.sARRDataSet5 = new SARR.Presentacion.SARRDataSet5();
-            this.btnInsAct = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.sARRDataSet7 = new SARR.Presentacion.SARRDataSet7();
             this.aCTIVOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter2 = new SARR.Presentacion.SARRDataSet7TableAdapters.ACTIVOSTableAdapter();
             this.sARRDataSet8 = new SARR.Presentacion.SARRDataSet8();
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter3 = new SARR.Presentacion.SARRDataSet8TableAdapters.ACTIVOSTableAdapter();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblTimeMan = new System.Windows.Forms.Label();
+            this.lblFechMan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -219,10 +226,7 @@
             this.splitContainer31.Panel2.SuspendLayout();
             this.splitContainer31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -328,6 +332,9 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet2)).BeginInit();
@@ -341,6 +348,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -563,6 +572,25 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activos";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(120, 17);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(198, 28);
+            this.comboBox3.TabIndex = 7;
+            // 
+            // btnInsAct
+            // 
+            this.btnInsAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsAct.Location = new System.Drawing.Point(328, 155);
+            this.btnInsAct.Name = "btnInsAct";
+            this.btnInsAct.Size = new System.Drawing.Size(49, 27);
+            this.btnInsAct.TabIndex = 3;
+            this.btnInsAct.Text = "+";
+            this.btnInsAct.UseVisualStyleBackColor = true;
+            this.btnInsAct.Click += new System.EventHandler(this.btnInsAct_Click);
             // 
             // textBox2
             // 
@@ -801,16 +829,6 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // aREACOMUNBindingSource1
-            // 
-            this.aREACOMUNBindingSource1.DataMember = "AREACOMUN";
-            this.aREACOMUNBindingSource1.DataSource = this.sARRDataSet;
-            // 
-            // sARRDataSet
-            // 
-            this.sARRDataSet.DataSetName = "SARRDataSet";
-            this.sARRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView6
             // 
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -819,10 +837,6 @@
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(546, 243);
             this.dataGridView6.TabIndex = 0;
-            // 
-            // updateOrderOptionBindingSource
-            // 
-            this.updateOrderOptionBindingSource.DataSource = typeof(SARR.Presentacion.SARRDataSet5TableAdapters.TableAdapterManager.UpdateOrderOption);
             // 
             // tabPage2
             // 
@@ -1026,6 +1040,9 @@
             // 
             // splitContainer11.Panel1
             // 
+            this.splitContainer11.Panel1.Controls.Add(this.lblTimeMan);
+            this.splitContainer11.Panel1.Controls.Add(this.groupBox4);
+            this.splitContainer11.Panel1.Controls.Add(this.lblFechMan);
             this.splitContainer11.Panel1.Controls.Add(this.dataGridView2);
             // 
             // splitContainer11.Panel2
@@ -1037,52 +1054,11 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column20,
-            this.iDPERSONALDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.mANTENIMIENTOBindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(494, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1205, 370);
+            this.dataGridView2.Size = new System.Drawing.Size(706, 210);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Id";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Empleado";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Horario";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Observaciones";
-            this.Column7.Name = "Column7";
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Costo";
-            this.Column20.Name = "Column20";
-            // 
-            // iDPERSONALDataGridViewTextBoxColumn
-            // 
-            this.iDPERSONALDataGridViewTextBoxColumn.DataPropertyName = "IDPERSONAL";
-            this.iDPERSONALDataGridViewTextBoxColumn.HeaderText = "IDPERSONAL";
-            this.iDPERSONALDataGridViewTextBoxColumn.Name = "iDPERSONALDataGridViewTextBoxColumn";
             // 
             // mANTENIMIENTOBindingSource
             // 
@@ -1108,7 +1084,7 @@
             // 
             this.splitContainer12.Panel2.Controls.Add(this.splitContainer13);
             this.splitContainer12.Size = new System.Drawing.Size(1205, 128);
-            this.splitContainer12.SplitterDistance = 296;
+            this.splitContainer12.SplitterDistance = 177;
             this.splitContainer12.TabIndex = 0;
             // 
             // btnManGen
@@ -1134,8 +1110,8 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.splitContainer14);
-            this.splitContainer13.Size = new System.Drawing.Size(905, 128);
-            this.splitContainer13.SplitterDistance = 301;
+            this.splitContainer13.Size = new System.Drawing.Size(1024, 128);
+            this.splitContainer13.SplitterDistance = 340;
             this.splitContainer13.TabIndex = 0;
             // 
             // btnManGuar
@@ -1161,8 +1137,8 @@
             // splitContainer14.Panel2
             // 
             this.splitContainer14.Panel2.Controls.Add(this.btnManEli);
-            this.splitContainer14.Size = new System.Drawing.Size(600, 128);
-            this.splitContainer14.SplitterDistance = 269;
+            this.splitContainer14.Size = new System.Drawing.Size(680, 128);
+            this.splitContainer14.SplitterDistance = 304;
             this.splitContainer14.TabIndex = 0;
             // 
             // btnManCan
@@ -1728,6 +1704,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte:";
             // 
+            // aREACOMUNBindingSource1
+            // 
+            this.aREACOMUNBindingSource1.DataMember = "AREACOMUN";
+            this.aREACOMUNBindingSource1.DataSource = this.sARRDataSet;
+            // 
+            // sARRDataSet
+            // 
+            this.sARRDataSet.DataSetName = "SARRDataSet";
+            this.sARRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // updateOrderOptionBindingSource
+            // 
+            this.updateOrderOptionBindingSource.DataSource = typeof(SARR.Presentacion.SARRDataSet5TableAdapters.TableAdapterManager.UpdateOrderOption);
+            // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
@@ -1796,25 +1786,6 @@
             this.sARRDataSet5.DataSetName = "SARRDataSet5";
             this.sARRDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnInsAct
-            // 
-            this.btnInsAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsAct.Location = new System.Drawing.Point(328, 155);
-            this.btnInsAct.Name = "btnInsAct";
-            this.btnInsAct.Size = new System.Drawing.Size(49, 27);
-            this.btnInsAct.TabIndex = 3;
-            this.btnInsAct.Text = "+";
-            this.btnInsAct.UseVisualStyleBackColor = true;
-            this.btnInsAct.Click += new System.EventHandler(this.btnInsAct_Click);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(120, 17);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 28);
-            this.comboBox3.TabIndex = 7;
-            // 
             // sARRDataSet7
             // 
             this.sARRDataSet7.DataSetName = "SARRDataSet7";
@@ -1842,6 +1813,133 @@
             // aCTIVOSTableAdapter3
             // 
             this.aCTIVOSTableAdapter3.ClearBeforeFill = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.comboBox4);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.groupBox4.Location = new System.Drawing.Point(28, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(436, 270);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(6, 31);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Empleado";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(6, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 20);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Horario";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(6, 112);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Costo";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(6, 152);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(114, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Observaciones";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(143, 28);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(185, 28);
+            this.comboBox4.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(198, 63);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(211, 29);
+            this.panel3.TabIndex = 6;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(4, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 20);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "hh:mm";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Location = new System.Drawing.Point(143, 63);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker3.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(143, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(143, 152);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(248, 97);
+            this.textBox3.TabIndex = 8;
+            // 
+            // lblTimeMan
+            // 
+            this.lblTimeMan.AutoSize = true;
+            this.lblTimeMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeMan.Location = new System.Drawing.Point(248, 327);
+            this.lblTimeMan.Name = "lblTimeMan";
+            this.lblTimeMan.Size = new System.Drawing.Size(0, 23);
+            this.lblTimeMan.TabIndex = 5;
+            // 
+            // lblFechMan
+            // 
+            this.lblFechMan.AutoSize = true;
+            this.lblFechMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechMan.Location = new System.Drawing.Point(34, 327);
+            this.lblFechMan.Name = "lblFechMan";
+            this.lblFechMan.Size = new System.Drawing.Size(0, 23);
+            this.lblFechMan.TabIndex = 4;
             // 
             // Form1
             // 
@@ -1902,10 +2000,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer31)).EndInit();
             this.splitContainer31.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -1936,6 +2031,7 @@
             this.splitContainer10.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.splitContainer11.Panel1.ResumeLayout(false);
+            this.splitContainer11.Panel1.PerformLayout();
             this.splitContainer11.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
@@ -2014,6 +2110,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet2)).EndInit();
@@ -2027,6 +2126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2091,11 +2194,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private SARR.Presentacion.SARRDataSet sARRDataSet;
         private System.Windows.Forms.BindingSource aCTIVOSBindingSource;
         private SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter;
@@ -2157,7 +2255,6 @@
         private SARR.Presentacion.SARRDataSet2 sARRDataSet2;
         private System.Windows.Forms.BindingSource pERSONALBindingSource;
         private SARR.Presentacion.SARRDataSet2TableAdapters.PERSONALTableAdapter pERSONALTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDPERSONALDataGridViewTextBoxColumn;
         private SARR.Presentacion.SARRDataSet3 sARRDataSet3;
         private System.Windows.Forms.BindingSource mANTENIMIENTOBindingSource;
         private SARR.Presentacion.SARRDataSet3TableAdapters.MANTENIMIENTOTableAdapter mANTENIMIENTOTableAdapter;
@@ -2176,6 +2273,19 @@
         private SARR.Presentacion.SARRDataSet8 sARRDataSet8;
         private System.Windows.Forms.BindingSource aCTIVOSBindingSource3;
         private SARR.Presentacion.SARRDataSet8TableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTimeMan;
+        private System.Windows.Forms.Label lblFechMan;
         
 
     }

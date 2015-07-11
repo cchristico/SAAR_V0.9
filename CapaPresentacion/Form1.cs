@@ -25,8 +25,10 @@ namespace CapaPresentacion
             dataGridView1.DataSource = DT;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].Visible = false;
-            dtTimer.Format = DateTimePickerFormat.Custom;
+            dtTimer.Format = DateTimePickerFormat.Custom; 
+            dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
+            dateTimePicker3.CustomFormat = "HH : mm";
 
             
         }
@@ -164,6 +166,8 @@ namespace CapaPresentacion
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblTime2.Text = DateTime.Now.ToLongTimeString();
             lblDate2.Text = DateTime.Now.ToLongDateString();
+            lblFechMan.Text = DateTime.Now.ToLongDateString();
+            lblTimeMan.Text = DateTime.Now.ToLongTimeString();
         }
         
 
@@ -186,11 +190,11 @@ namespace CapaPresentacion
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            DatoEliminar = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtArComTipo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtArComNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            DatoEliminar = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtArComTipo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtArComNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString().Trim();
+            txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim();
 
             DataTable DT = cts.consultar("select ac.NOMBREACTIVO as ACTIVOS, ex.CANTIDAD,ac.OBSERVACION from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
             dataGridView6.DataSource = DT;
