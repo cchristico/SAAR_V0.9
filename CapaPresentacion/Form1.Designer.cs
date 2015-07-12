@@ -86,9 +86,20 @@
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.lblTimeMan = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblFechMan = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.mANTENIMIENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sARRDataSet3 = new SARR.Presentacion.SARRDataSet3();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.btnManGen = new System.Windows.Forms.Button();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
@@ -143,6 +154,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.mANTENIMIENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sARRDataSet3 = new SARR.Presentacion.SARRDataSet3();
             this.aREACOMUNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sARRDataSet = new SARR.Presentacion.SARRDataSet();
             this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -167,19 +180,9 @@
             this.sARRDataSet8 = new SARR.Presentacion.SARRDataSet8();
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.aCTIVOSTableAdapter3 = new SARR.Presentacion.SARRDataSet8TableAdapters.ACTIVOSTableAdapter();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblTimeMan = new System.Windows.Forms.Label();
-            this.lblFechMan = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -244,6 +247,7 @@
             this.splitContainer29.Panel1.SuspendLayout();
             this.splitContainer29.Panel2.SuspendLayout();
             this.splitContainer29.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -258,9 +262,9 @@
             this.splitContainer11.Panel1.SuspendLayout();
             this.splitContainer11.Panel2.SuspendLayout();
             this.splitContainer11.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
             this.splitContainer12.Panel2.SuspendLayout();
@@ -332,6 +336,8 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
@@ -348,8 +354,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -945,6 +949,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox2.Location = new System.Drawing.Point(3, 12);
@@ -1052,6 +1058,133 @@
             this.splitContainer11.SplitterDistance = 370;
             this.splitContainer11.TabIndex = 0;
             // 
+            // lblTimeMan
+            // 
+            this.lblTimeMan.AutoSize = true;
+            this.lblTimeMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeMan.Location = new System.Drawing.Point(248, 327);
+            this.lblTimeMan.Name = "lblTimeMan";
+            this.lblTimeMan.Size = new System.Drawing.Size(0, 23);
+            this.lblTimeMan.TabIndex = 5;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.comboBox4);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.groupBox4.Location = new System.Drawing.Point(28, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(436, 270);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(143, 152);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(248, 97);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(143, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(198, 63);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(211, 29);
+            this.panel3.TabIndex = 6;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(4, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 20);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "hh:mm";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Location = new System.Drawing.Point(143, 63);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker3.TabIndex = 5;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(143, 28);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(185, 28);
+            this.comboBox4.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(6, 152);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(114, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Observaciones";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(6, 112);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Costo";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(6, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 20);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Horario";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(6, 31);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Empleado";
+            // 
+            // lblFechMan
+            // 
+            this.lblFechMan.AutoSize = true;
+            this.lblFechMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechMan.Location = new System.Drawing.Point(34, 327);
+            this.lblFechMan.Name = "lblFechMan";
+            this.lblFechMan.Size = new System.Drawing.Size(0, 23);
+            this.lblFechMan.TabIndex = 4;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1059,16 +1192,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(706, 210);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // mANTENIMIENTOBindingSource
-            // 
-            this.mANTENIMIENTOBindingSource.DataMember = "MANTENIMIENTO";
-            this.mANTENIMIENTOBindingSource.DataSource = this.sARRDataSet3;
-            // 
-            // sARRDataSet3
-            // 
-            this.sARRDataSet3.DataSetName = "SARRDataSet3";
-            this.sARRDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer12
             // 
@@ -1181,6 +1304,7 @@
             // 
             // splitContainer15.Panel1
             // 
+            this.splitContainer15.Panel1.Controls.Add(this.groupBox5);
             this.splitContainer15.Panel1.Controls.Add(this.dataGridView3);
             // 
             // splitContainer15.Panel2
@@ -1198,10 +1322,9 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Location = new System.Drawing.Point(653, 32);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1205, 374);
+            this.dataGridView3.Size = new System.Drawing.Size(534, 197);
             this.dataGridView3.TabIndex = 0;
             // 
             // Column8
@@ -1704,6 +1827,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte:";
             // 
+            // mANTENIMIENTOBindingSource
+            // 
+            this.mANTENIMIENTOBindingSource.DataMember = "MANTENIMIENTO";
+            this.mANTENIMIENTOBindingSource.DataSource = this.sARRDataSet3;
+            // 
+            // sARRDataSet3
+            // 
+            this.sARRDataSet3.DataSetName = "SARRDataSet3";
+            this.sARRDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // aREACOMUNBindingSource1
             // 
             this.aREACOMUNBindingSource1.DataMember = "AREACOMUN";
@@ -1814,132 +1947,33 @@
             // 
             this.aCTIVOSTableAdapter3.ClearBeforeFill = true;
             // 
-            // groupBox4
+            // groupBox5
             // 
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.dateTimePicker3);
-            this.groupBox4.Controls.Add(this.comboBox4);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBox4.Location = new System.Drawing.Point(28, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(436, 270);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox5.Location = new System.Drawing.Point(22, 32);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(405, 158);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Reuniones";
             // 
-            // label13
+            // label18
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(6, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 20);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Empleado";
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(9, 35);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 20);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Area Comun";
             // 
-            // label14
+            // textBox4
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(6, 72);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Horario";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(6, 112);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Costo";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(6, 152);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 20);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Observaciones";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(143, 28);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(185, 28);
-            this.comboBox4.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(198, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(211, 29);
-            this.panel3.TabIndex = 6;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(4, 4);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 20);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "hh:mm";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(143, 63);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker3.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(143, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(143, 152);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 97);
-            this.textBox3.TabIndex = 8;
-            // 
-            // lblTimeMan
-            // 
-            this.lblTimeMan.AutoSize = true;
-            this.lblTimeMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeMan.Location = new System.Drawing.Point(248, 327);
-            this.lblTimeMan.Name = "lblTimeMan";
-            this.lblTimeMan.Size = new System.Drawing.Size(0, 23);
-            this.lblTimeMan.TabIndex = 5;
-            // 
-            // lblFechMan
-            // 
-            this.lblFechMan.AutoSize = true;
-            this.lblFechMan.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechMan.Location = new System.Drawing.Point(34, 327);
-            this.lblFechMan.Name = "lblFechMan";
-            this.lblFechMan.Size = new System.Drawing.Size(0, 23);
-            this.lblFechMan.TabIndex = 4;
+            this.textBox4.Location = new System.Drawing.Point(145, 34);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 1;
             // 
             // Form1
             // 
@@ -2019,6 +2053,8 @@
             this.splitContainer29.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer29)).EndInit();
             this.splitContainer29.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
@@ -2035,9 +2071,11 @@
             this.splitContainer11.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).EndInit();
             this.splitContainer12.Panel1.ResumeLayout(false);
             this.splitContainer12.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
@@ -2110,6 +2148,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
@@ -2126,10 +2166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2286,6 +2322,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblTimeMan;
         private System.Windows.Forms.Label lblFechMan;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox5;
         
 
     }
