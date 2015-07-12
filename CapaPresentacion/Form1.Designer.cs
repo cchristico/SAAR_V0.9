@@ -38,6 +38,7 @@
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer34 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbOperabilidad = new System.Windows.Forms.ComboBox();
             this.txtArComAforo = new System.Windows.Forms.TextBox();
             this.txtArComNombre = new System.Windows.Forms.TextBox();
             this.txtArComTipo = new System.Windows.Forms.TextBox();
@@ -46,9 +47,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.cmbActivo = new System.Windows.Forms.ComboBox();
             this.btnInsAct = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -158,9 +161,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbOperabilidad = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -444,6 +444,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area Comun";
             // 
+            // cmbOperabilidad
+            // 
+            this.cmbOperabilidad.FormattingEnabled = true;
+            this.cmbOperabilidad.Items.AddRange(new object[] {
+            "",
+            "Disponible",
+            "Mantenimiento",
+            "Inaccesible"});
+            this.cmbOperabilidad.Location = new System.Drawing.Point(120, 116);
+            this.cmbOperabilidad.Name = "cmbOperabilidad";
+            this.cmbOperabilidad.Size = new System.Drawing.Size(198, 28);
+            this.cmbOperabilidad.TabIndex = 7;
+            // 
             // txtArComAforo
             // 
             this.txtArComAforo.Location = new System.Drawing.Point(120, 82);
@@ -518,7 +531,7 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.cmbActivo);
             this.groupBox3.Controls.Add(this.btnInsAct);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtObs);
             this.groupBox3.Controls.Add(this.txtCant);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
@@ -531,6 +544,28 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activos";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(328, 161);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(49, 27);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "0";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(269, 161);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 27);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cmbActivo
             // 
@@ -551,14 +586,14 @@
             this.btnInsAct.UseVisualStyleBackColor = true;
             this.btnInsAct.Click += new System.EventHandler(this.btnInsAct_Click);
             // 
-            // textBox2
+            // txtObs
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 82);
-            this.textBox2.MaxLength = 4;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 73);
-            this.textBox2.TabIndex = 6;
+            this.txtObs.Location = new System.Drawing.Point(120, 82);
+            this.txtObs.MaxLength = 4;
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(198, 73);
+            this.txtObs.TabIndex = 6;
             // 
             // txtCant
             // 
@@ -797,6 +832,7 @@
             this.dataGridView6.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView6.Location = new System.Drawing.Point(0, 0);
             this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.ReadOnly = true;
             this.dataGridView6.Size = new System.Drawing.Size(546, 243);
             this.dataGridView6.TabIndex = 0;
             this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
@@ -1818,40 +1854,6 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cmbOperabilidad
-            // 
-            this.cmbOperabilidad.FormattingEnabled = true;
-            this.cmbOperabilidad.Items.AddRange(new object[] {
-            "",
-            "Disponible",
-            "Mantenimiento",
-            "Inaccesible"});
-            this.cmbOperabilidad.Location = new System.Drawing.Point(120, 116);
-            this.cmbOperabilidad.Name = "cmbOperabilidad";
-            this.cmbOperabilidad.Size = new System.Drawing.Size(198, 28);
-            this.cmbOperabilidad.TabIndex = 7;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(269, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(328, 161);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(49, 27);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "0";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2136,7 +2138,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

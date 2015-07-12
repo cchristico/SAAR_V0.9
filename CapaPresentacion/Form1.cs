@@ -97,7 +97,14 @@ namespace CapaPresentacion
             txtArComAforo.Clear();
             cmbOperabilidad.SelectedIndex = 0;
             txtArComTipo.Clear();
+           
         }
+        public void limpiar1()
+        {
+            txtCant.Clear();
+            txtObs.Clear();
+        }
+         
         private void renderBtn(Button boton)
         {
             boton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.None;
@@ -176,6 +183,18 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet8.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            //this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet7.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            //this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet5.EXISTENCIAS' Puede moverla o quitarla según sea necesario.
+            
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet4.ACTIVOS' Puede moverla o quitarla según sea necesario.
+            //this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet3.MANTENIMIENTO' Puede moverla o quitarla según sea necesario.
+            //this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
+            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet2.PERSONAL' Puede moverla o quitarla según sea necesario.
+            //this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
             timer.Start();
         }
 
@@ -215,8 +234,9 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("El activo " + cmbActivo.SelectedItem.ToString() + " ya se enceuntra asociado\n");
                 }
-                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
                 dataGridView6.DataSource = DT;
+                limpiar1();
             }
             
         }
@@ -258,7 +278,8 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int idAct = int.Parse(cmbActivo.SelectedIndex.ToString())+1;
+           // int idAct = int.Parse(cmbActivo.SelectedIndex.ToString())+1;
+            int idAct = int.Parse(dataGridView6.CurrentRow.Cells[0].Value.ToString().Trim());
             string message = "Desea Eliminar: " + cmbActivo.SelectedItem.ToString();
             const string caption = "Habitación Eliminada";
             var result = MessageBox.Show(message, caption,
@@ -277,8 +298,8 @@ namespace CapaPresentacion
                     MessageBox.Show("Activo asociado Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
-                limpiar();
-                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+                limpiar1();
+                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
                 dataGridView6.DataSource = DT;
 
             }
@@ -287,7 +308,19 @@ namespace CapaPresentacion
 
         private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int idAct= int.Parse(dataGridView6.CurrentRow.Cells[0].Value.ToString().Trim())-1;
+            cmbActivo.SelectedIndex = idAct;
+            txtCant.Text = dataGridView6.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtObs.Text = dataGridView6.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string idAct= dataGridView6.CurrentRow.Cells[0].Value.ToString().Trim();
+            valCons.actualizarActAreaCom(txtCant.Text.Trim(), idAct, DatoEliminar);
+            DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+            dataGridView6.DataSource = DT;
+            limpiar1();
         }
         
     }
