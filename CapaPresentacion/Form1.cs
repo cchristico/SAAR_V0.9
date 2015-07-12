@@ -174,17 +174,17 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet8.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
+            //this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet7.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
+            //this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet5.EXISTENCIAS' Puede moverla o quitarla según sea necesario.
             
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet4.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
+            //this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet3.MANTENIMIENTO' Puede moverla o quitarla según sea necesario.
-            this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
+            //this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
             // TODO: esta línea de código carga datos en la tabla 'sARRDataSet2.PERSONAL' Puede moverla o quitarla según sea necesario.
-            this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
+            //this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
             timer.Start();
         }
 
