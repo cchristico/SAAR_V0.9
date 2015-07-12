@@ -19,10 +19,11 @@ namespace SAAR.Negocio
         /*Insert*/
         public String insAreaComun(string tipo, string NomAreaCom, string Aforo, string Disp)
         {
+            int IdArea; 
             try
             {
                     DataTable DT = cst.consultar("select IDAREACOMUN from AREACOMUN order by IDAREACOMUN desc");
-                    int IdArea = int.Parse(DT.Rows[0][0].ToString()) + 1;
+                    IdArea= int.Parse(DT.Rows[0][0].ToString()) + 1;
                     string insert = "insert into AREACOMUN values (" + IdArea.ToString() + ",'" + tipo + "','" + NomAreaCom + "'," + Aforo + ",'" + Disp + "')";
                     cst.counsultaTodoTipo(insert);
             }
@@ -66,5 +67,26 @@ namespace SAAR.Negocio
         {
             cst.counsultaTodoTipo("update EXISTENCIAS set CANTIDAD_EXISTENCIAS = "+cant +"where IDACTIVO ="+idAct+" and IDAREACOMUN="+idAreCom);
         }
+
+       /*------------------Activos--------------------------*/
+       /*IngresarActivos*/
+        public void ingresarActivo(string nombreAct, string obsAct, string cant)
+        {
+            int idActivo;
+              DataTable DT = cst.consultar("select IDACTIVO from ACTIVOS order by IDACTIVO desc");
+              idActivo = int.Parse(DT.Rows[0][0].ToString()) + 1;
+            cst.counsultaTodoTipo("insert into ACTIVOS values ("+idActivo+",'"+nombreAct+"','"+obsAct+"',"+cant+")");
+        }
+       /*Actualizar Activo*/
+       public void actualizarAcivo(string idAct,string nombAct, string obsAct,string cantAct)
+        {
+            cst.counsultaTodoTipo("update ACTIVOS set NOMBRE_ACT ='"+nombAct+"',OBSERVACION_ACT='"+obsAct+"',CANTIDAD_ACT="+cantAct+"where IDACTIVO = "+idAct);
+       }
+       /*Elmianr Activo*/
+       public void eliminarActivo(string idActivo)
+       {
+           cst.consultar("delete from ACTIVOS where IDACTIVO=" + idActivo);
+       }
+
     }   
 }

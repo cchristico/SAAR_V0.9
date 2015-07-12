@@ -15,6 +15,7 @@ namespace CapaPresentacion
     {
         CLSConsulta cts = new CLSConsulta();
         string DatoEliminar;
+        string IdActivo;
         ValidarConsultas valCons = new ValidarConsultas();
         public Form1()
         {
@@ -22,11 +23,17 @@ namespace CapaPresentacion
             renderizacion();
             llenarCmbActivo();
             this.MinimumSize = new Size(750, 330);
+            /*Inicialización Area Comun*/
             DataTable DT = cts.consultar("select * from AREACOMUN");
             dataGridView1.DataSource = DT;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].Visible = false;
-            
+            /*Inicializacion Activos*/
+            DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
+            dtGridActivos.DataSource = DT1;
+            dtGridActivos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtGridActivos.Columns[0].Visible = false;
+            /**/
             dtTimer.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
@@ -81,23 +88,16 @@ namespace CapaPresentacion
             limpiar();
 
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
         }
-
-
-
-
-
         public void limpiar()
         {
             txtArComNombre.Clear();
             txtArComAforo.Clear();
             cmbOperabilidad.SelectedIndex = 0;
             txtArComTipo.Clear();
-           
         }
         public void limpiar1()
         {
@@ -133,7 +133,7 @@ namespace CapaPresentacion
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string message = "Desea Eliminar: " + txtArComNombre.Text.ToString();
-            const string caption = "Habitación Eliminada";
+            const string caption = "Area Eliminada";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Warning);
@@ -183,23 +183,65 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet8.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            //this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet7.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            //this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet5.EXISTENCIAS' Puede moverla o quitarla según sea necesario.
-            
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet4.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            //this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet3.MANTENIMIENTO' Puede moverla o quitarla según sea necesario.
-            //this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet2.PERSONAL' Puede moverla o quitarla según sea necesario.
-            //this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
             timer.Start();
         }
 
+        /*Activos*/
+        private void limpiarActivo()
+        {
+            txtAcCant.Clear();
+            txtAcNomb.Clear();
+            txtAcObs.Clear();
+        }
+
+        private void btbAcGuar_Click(object sender, EventArgs e)
+        {
+
+            valCons.ingresarActivo(txtAcNomb.Text.ToString(), txtAcObs.Text.ToString(), txtAcCant.Text.ToString());
+            DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
+            dtGridActivos.DataSource = DT1;
+            llenarCmbActivo();
+        }
+
+        private void btnAcAct_Click(object sender, EventArgs e)
+        {
+            valCons.actualizarAcivo(IdActivo, txtAcNomb.Text.ToString(), txtAcObs.Text.ToString(), txtAcCant.Text.ToString());
+            DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
+            dtGridActivos.DataSource = DT1;
+            llenarCmbActivo();
+        }
+
+        private void btbAcElim_Click(object sender, EventArgs e)
+        {
+            string message = "Desea Eliminar: " + txtAcNomb.Text.ToString();
+            const string caption = "Activo Eliminado";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    valCons.eliminarActivo(IdActivo);
+                }
+                catch
+                {
+                    MessageBox.Show("Activo Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+
+
+                DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
+                dtGridActivos.DataSource = DT1;
+                llenarCmbActivo();
+            }
+        }
+
+        
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            
             DatoEliminar = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
             txtArComTipo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
             txtArComNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
@@ -213,9 +255,10 @@ namespace CapaPresentacion
             dataGridView6.DataSource = DT;
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView6.Columns[0].Visible = false;
+            
 
         }
-
+        
         private void btnInsAct_Click(object sender, EventArgs e)
         {
             if (txtCant.Text.ToString() == "")
@@ -281,7 +324,7 @@ namespace CapaPresentacion
            // int idAct = int.Parse(cmbActivo.SelectedIndex.ToString())+1;
             int idAct = int.Parse(dataGridView6.CurrentRow.Cells[0].Value.ToString().Trim());
             string message = "Desea Eliminar: " + cmbActivo.SelectedItem.ToString();
-            const string caption = "Habitación Eliminada";
+            const string caption = "Activo Eliminado";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Warning);
@@ -322,7 +365,15 @@ namespace CapaPresentacion
             dataGridView6.DataSource = DT;
             limpiar1();
         }
-        
+
+        private void dtGridActivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdActivo = dtGridActivos.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtAcNomb.Text = dtGridActivos.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtAcCant.Text =dtGridActivos.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtAcObs.Text = dtGridActivos.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
+       
     }
     }
 
