@@ -38,7 +38,6 @@
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer34 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtArComOper = new System.Windows.Forms.TextBox();
             this.txtArComAforo = new System.Windows.Forms.TextBox();
             this.txtArComNombre = new System.Windows.Forms.TextBox();
             this.txtArComTipo = new System.Windows.Forms.TextBox();
@@ -47,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbActivo = new System.Windows.Forms.ComboBox();
             this.btnInsAct = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
@@ -78,6 +77,8 @@
             this.dtTimer = new System.Windows.Forms.DateTimePicker();
             this.splitContainer29 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.mntCalendar = new System.Windows.Forms.MonthCalendar();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.lblTime2 = new System.Windows.Forms.Label();
@@ -109,6 +110,7 @@
             this.btnManEli = new System.Windows.Forms.Button();
             this.tabReuniones = new System.Windows.Forms.TabPage();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,35 +156,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.mANTENIMIENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sARRDataSet3 = new SARR.Presentacion.SARRDataSet3();
-            this.aREACOMUNBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sARRDataSet = new SARR.Presentacion.SARRDataSet();
-            this.updateOrderOptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.aREACOMUNBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVOSTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter();
-            this.aREACOMUNTableAdapter = new SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter();
-            this.sARRDataSet2 = new SARR.Presentacion.SARRDataSet2();
-            this.pERSONALBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pERSONALTableAdapter = new SARR.Presentacion.SARRDataSet2TableAdapters.PERSONALTableAdapter();
-            this.mANTENIMIENTOTableAdapter = new SARR.Presentacion.SARRDataSet3TableAdapters.MANTENIMIENTOTableAdapter();
-            this.sARRDataSet4 = new SARR.Presentacion.SARRDataSet4();
-            this.aCTIVOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVOSTableAdapter1 = new SARR.Presentacion.SARRDataSet4TableAdapters.ACTIVOSTableAdapter();
-            this.eXISTENCIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sARRDataSet6 = new SARR.Presentacion.SARRDataSet6();
-            this.sARRDataSet5 = new SARR.Presentacion.SARRDataSet5();
-            this.sARRDataSet7 = new SARR.Presentacion.SARRDataSet7();
-            this.aCTIVOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVOSTableAdapter2 = new SARR.Presentacion.SARRDataSet7TableAdapters.ACTIVOSTableAdapter();
-            this.sARRDataSet8 = new SARR.Presentacion.SARRDataSet8();
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.aCTIVOSTableAdapter3 = new SARR.Presentacion.SARRDataSet8TableAdapters.ACTIVOSTableAdapter();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbOperabilidad = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -336,23 +314,6 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONALBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXISTENCIASBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -466,7 +427,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtArComOper);
+            this.groupBox1.Controls.Add(this.cmbOperabilidad);
             this.groupBox1.Controls.Add(this.txtArComAforo);
             this.groupBox1.Controls.Add(this.txtArComNombre);
             this.groupBox1.Controls.Add(this.txtArComTipo);
@@ -482,14 +443,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area Comun";
-            // 
-            // txtArComOper
-            // 
-            this.txtArComOper.Location = new System.Drawing.Point(120, 109);
-            this.txtArComOper.MaxLength = 1;
-            this.txtArComOper.Name = "txtArComOper";
-            this.txtArComOper.Size = new System.Drawing.Size(198, 26);
-            this.txtArComOper.TabIndex = 7;
             // 
             // txtArComAforo
             // 
@@ -561,7 +514,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.cmbActivo);
             this.groupBox3.Controls.Add(this.btnInsAct);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.txtCant);
@@ -577,18 +532,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activos";
             // 
-            // comboBox3
+            // cmbActivo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(120, 17);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 28);
-            this.comboBox3.TabIndex = 7;
+            this.cmbActivo.FormattingEnabled = true;
+            this.cmbActivo.Location = new System.Drawing.Point(120, 17);
+            this.cmbActivo.Name = "cmbActivo";
+            this.cmbActivo.Size = new System.Drawing.Size(198, 28);
+            this.cmbActivo.TabIndex = 7;
             // 
             // btnInsAct
             // 
             this.btnInsAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsAct.Location = new System.Drawing.Point(328, 155);
+            this.btnInsAct.Location = new System.Drawing.Point(214, 161);
             this.btnInsAct.Name = "btnInsAct";
             this.btnInsAct.Size = new System.Drawing.Size(49, 27);
             this.btnInsAct.TabIndex = 3;
@@ -602,7 +557,7 @@
             this.textBox2.MaxLength = 4;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 78);
+            this.textBox2.Size = new System.Drawing.Size(198, 73);
             this.textBox2.TabIndex = 6;
             // 
             // txtCant
@@ -823,6 +778,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -835,12 +791,15 @@
             // 
             // dataGridView6
             // 
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView6.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView6.Location = new System.Drawing.Point(0, 0);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(546, 243);
             this.dataGridView6.TabIndex = 0;
+            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
             // tabPage2
             // 
@@ -959,6 +918,23 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Reserva";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(145, 34);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(9, 35);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 20);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Area Comun";
             // 
             // mntCalendar
             // 
@@ -1313,6 +1289,17 @@
             this.splitContainer15.Size = new System.Drawing.Size(1205, 502);
             this.splitContainer15.SplitterDistance = 374;
             this.splitContainer15.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox5.Location = new System.Drawing.Point(22, 32);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(405, 158);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Reuniones";
             // 
             // dataGridView3
             // 
@@ -1827,153 +1814,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte:";
             // 
-            // mANTENIMIENTOBindingSource
-            // 
-            this.mANTENIMIENTOBindingSource.DataMember = "MANTENIMIENTO";
-            this.mANTENIMIENTOBindingSource.DataSource = this.sARRDataSet3;
-            // 
-            // sARRDataSet3
-            // 
-            this.sARRDataSet3.DataSetName = "SARRDataSet3";
-            this.sARRDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aREACOMUNBindingSource1
-            // 
-            this.aREACOMUNBindingSource1.DataMember = "AREACOMUN";
-            this.aREACOMUNBindingSource1.DataSource = this.sARRDataSet;
-            // 
-            // sARRDataSet
-            // 
-            this.sARRDataSet.DataSetName = "SARRDataSet";
-            this.sARRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // updateOrderOptionBindingSource
-            // 
-            this.updateOrderOptionBindingSource.DataSource = typeof(SARR.Presentacion.SARRDataSet5TableAdapters.TableAdapterManager.UpdateOrderOption);
-            // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // aREACOMUNBindingSource
+            // cmbOperabilidad
             // 
-            this.aREACOMUNBindingSource.DataMember = "AREACOMUN";
-            this.aREACOMUNBindingSource.DataSource = this.sARRDataSet;
+            this.cmbOperabilidad.FormattingEnabled = true;
+            this.cmbOperabilidad.Items.AddRange(new object[] {
+            "",
+            "Disponible",
+            "Mantenimiento",
+            "Inaccesible"});
+            this.cmbOperabilidad.Location = new System.Drawing.Point(120, 116);
+            this.cmbOperabilidad.Name = "cmbOperabilidad";
+            this.cmbOperabilidad.Size = new System.Drawing.Size(198, 28);
+            this.cmbOperabilidad.TabIndex = 7;
             // 
-            // aCTIVOSBindingSource
+            // button2
             // 
-            this.aCTIVOSBindingSource.DataMember = "ACTIVOS";
-            this.aCTIVOSBindingSource.DataSource = this.sARRDataSet;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(269, 161);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 27);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // aCTIVOSTableAdapter
+            // button3
             // 
-            this.aCTIVOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // aREACOMUNTableAdapter
-            // 
-            this.aREACOMUNTableAdapter.ClearBeforeFill = true;
-            // 
-            // sARRDataSet2
-            // 
-            this.sARRDataSet2.DataSetName = "SARRDataSet2";
-            this.sARRDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pERSONALBindingSource
-            // 
-            this.pERSONALBindingSource.DataMember = "PERSONAL";
-            this.pERSONALBindingSource.DataSource = this.sARRDataSet2;
-            // 
-            // pERSONALTableAdapter
-            // 
-            this.pERSONALTableAdapter.ClearBeforeFill = true;
-            // 
-            // mANTENIMIENTOTableAdapter
-            // 
-            this.mANTENIMIENTOTableAdapter.ClearBeforeFill = true;
-            // 
-            // sARRDataSet4
-            // 
-            this.sARRDataSet4.DataSetName = "SARRDataSet4";
-            this.sARRDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aCTIVOSBindingSource1
-            // 
-            this.aCTIVOSBindingSource1.DataMember = "ACTIVOS";
-            this.aCTIVOSBindingSource1.DataSource = this.sARRDataSet4;
-            // 
-            // aCTIVOSTableAdapter1
-            // 
-            this.aCTIVOSTableAdapter1.ClearBeforeFill = true;
-            // 
-            // eXISTENCIASBindingSource
-            // 
-            this.eXISTENCIASBindingSource.DataMember = "EXISTENCIAS";
-            // 
-            // sARRDataSet6
-            // 
-            this.sARRDataSet6.DataSetName = "SARRDataSet6";
-            this.sARRDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sARRDataSet5
-            // 
-            this.sARRDataSet5.DataSetName = "SARRDataSet5";
-            this.sARRDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sARRDataSet7
-            // 
-            this.sARRDataSet7.DataSetName = "SARRDataSet7";
-            this.sARRDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aCTIVOSBindingSource2
-            // 
-            this.aCTIVOSBindingSource2.DataMember = "ACTIVOS";
-            this.aCTIVOSBindingSource2.DataSource = this.sARRDataSet7;
-            // 
-            // aCTIVOSTableAdapter2
-            // 
-            this.aCTIVOSTableAdapter2.ClearBeforeFill = true;
-            // 
-            // sARRDataSet8
-            // 
-            this.sARRDataSet8.DataSetName = "SARRDataSet8";
-            this.sARRDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aCTIVOSBindingSource3
-            // 
-            this.aCTIVOSBindingSource3.DataMember = "ACTIVOS";
-            this.aCTIVOSBindingSource3.DataSource = this.sARRDataSet8;
-            // 
-            // aCTIVOSTableAdapter3
-            // 
-            this.aCTIVOSTableAdapter3.ClearBeforeFill = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox5.Location = new System.Drawing.Point(22, 32);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(405, 158);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Reuniones";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(9, 35);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 20);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Area Comun";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(145, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 1;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(328, 161);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(49, 27);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "0";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2148,23 +2025,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mANTENIMIENTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateOrderOptionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aREACOMUNBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONALBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXISTENCIASBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sARRDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
@@ -2230,12 +2090,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private SARR.Presentacion.SARRDataSet sARRDataSet;
-        private System.Windows.Forms.BindingSource aCTIVOSBindingSource;
-        private SARR.Presentacion.SARRDataSetTableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter;
-        private System.Windows.Forms.BindingSource aREACOMUNBindingSource;
-        private SARR.Presentacion.SARRDataSetTableAdapters.AREACOMUNTableAdapter aREACOMUNTableAdapter;
-        private System.Windows.Forms.BindingSource aREACOMUNBindingSource1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer4;
@@ -2274,7 +2128,6 @@
         private System.Windows.Forms.GroupBox pnpPanel;
         private System.Windows.Forms.SplitContainer splitContainer34;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtArComOper;
         private System.Windows.Forms.TextBox txtArComAforo;
         private System.Windows.Forms.TextBox txtArComNombre;
         private System.Windows.Forms.TextBox txtArComTipo;
@@ -2288,27 +2141,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private SARR.Presentacion.SARRDataSet2 sARRDataSet2;
-        private System.Windows.Forms.BindingSource pERSONALBindingSource;
-        private SARR.Presentacion.SARRDataSet2TableAdapters.PERSONALTableAdapter pERSONALTableAdapter;
-        private SARR.Presentacion.SARRDataSet3 sARRDataSet3;
-        private System.Windows.Forms.BindingSource mANTENIMIENTOBindingSource;
-        private SARR.Presentacion.SARRDataSet3TableAdapters.MANTENIMIENTOTableAdapter mANTENIMIENTOTableAdapter;
-        private SARR.Presentacion.SARRDataSet4 sARRDataSet4;
-        private System.Windows.Forms.BindingSource aCTIVOSBindingSource1;
-        private SARR.Presentacion.SARRDataSet4TableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter1;
-        private System.Windows.Forms.BindingSource eXISTENCIASBindingSource;
-        private System.Windows.Forms.BindingSource updateOrderOptionBindingSource;
-        private SARR.Presentacion.SARRDataSet6 sARRDataSet6;
-        private SARR.Presentacion.SARRDataSet5 sARRDataSet5;
         private System.Windows.Forms.Button btnInsAct;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private SARR.Presentacion.SARRDataSet7 sARRDataSet7;
-        private System.Windows.Forms.BindingSource aCTIVOSBindingSource2;
-        private SARR.Presentacion.SARRDataSet7TableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter2;
-        private SARR.Presentacion.SARRDataSet8 sARRDataSet8;
+        private System.Windows.Forms.ComboBox cmbActivo;
         private System.Windows.Forms.BindingSource aCTIVOSBindingSource3;
-        private SARR.Presentacion.SARRDataSet8TableAdapters.ACTIVOSTableAdapter aCTIVOSTableAdapter3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
@@ -2325,6 +2160,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox cmbOperabilidad;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
         
 
     }

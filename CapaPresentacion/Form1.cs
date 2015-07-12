@@ -20,22 +20,24 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             renderizacion();
+            llenarCmbActivo();
             this.MinimumSize = new Size(750, 330);
             DataTable DT = cts.consultar("select * from AREACOMUN");
             dataGridView1.DataSource = DT;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].Visible = false;
-            dtTimer.Format = DateTimePickerFormat.Custom; 
+            
+            dtTimer.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
             dateTimePicker3.CustomFormat = "HH : mm";
 
-            
+
         }
-     
-   private void txtArComTipo_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void txtArComTipo_KeyPress(object sender, KeyPressEventArgs e)
         {
-           if (char.IsSymbol(e.KeyChar))
+            if (char.IsSymbol(e.KeyChar))
                 e.Handled = true;
             else if (char.IsNumber(e.KeyChar))
                 e.Handled = true;
@@ -67,15 +69,15 @@ namespace CapaPresentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            String MenIngreso="";
-            MenIngreso = valCons.insAreaComun(txtArComTipo.Text.ToString(), txtArComNombre.Text.ToString(), txtArComAforo.Text.ToString(), txtArComOper.Text.ToString());
-            
-                MessageBox.Show("Ingreso Exitoso");
-            
-           // else { MessageBox.Show("Verifique Información"+MenIngreso); }
-                DataTable DT = cts.consultar("select * from AREACOMUN");
-                dataGridView1.DataSource = DT;
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;  
+            String MenIngreso = "";
+            MenIngreso = valCons.insAreaComun(txtArComTipo.Text.ToString(), txtArComNombre.Text.ToString(), txtArComAforo.Text.ToString(), cmbOperabilidad.SelectedItem.ToString().Substring(0, 1));
+
+            MessageBox.Show("Ingreso Exitoso");
+
+            // else { MessageBox.Show("Verifique Información"+MenIngreso); }
+            DataTable DT = cts.consultar("select * from AREACOMUN");
+            dataGridView1.DataSource = DT;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             limpiar();
 
         }
@@ -93,7 +95,7 @@ namespace CapaPresentacion
         {
             txtArComNombre.Clear();
             txtArComAforo.Clear();
-            txtArComOper.Clear();
+            cmbOperabilidad.SelectedIndex = 0;
             txtArComTipo.Clear();
         }
         private void renderBtn(Button boton)
@@ -104,7 +106,6 @@ namespace CapaPresentacion
         {
             txtBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.None;
         }
-
         public void renderizacion()
         {
             AreasComunes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.None;
@@ -117,9 +118,9 @@ namespace CapaPresentacion
             renderTxt(txtArComAforo);
             renderTxt(txtArComNombre);
             renderTxt(txtArComTipo);
-            renderTxt(txtArComOper);
-            
-        
+            //renderTxt(cmbOperabilidad);
+
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -136,7 +137,8 @@ namespace CapaPresentacion
                 {
                     valCons.eliminarArea(DatoEliminar);
                 }
-                catch {
+                catch
+                {
                     MessageBox.Show("Area Comun Eliminada", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
@@ -144,20 +146,20 @@ namespace CapaPresentacion
 
                 DataTable DT = cts.consultar("select * from AREACOMUN");
                 dataGridView1.DataSource = DT;
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;  
-            
-                
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
             }
-            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            valCons.actualizar(DatoEliminar.Trim(), txtArComTipo.Text.ToString().Trim(), txtArComNombre.Text.ToString().Trim(), txtArComAforo.Text.ToString().Trim(), txtArComOper.Text.ToString().Trim());
+            valCons.actualizar(DatoEliminar.Trim(), txtArComTipo.Text.ToString().Trim(), txtArComNombre.Text.ToString().Trim(), txtArComAforo.Text.ToString().Trim(), cmbOperabilidad.SelectedItem.ToString().Substring(0, 1));
             limpiar();
             DataTable DT = cts.consultar("select * from AREACOMUN");
             dataGridView1.DataSource = DT;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;  
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -169,22 +171,11 @@ namespace CapaPresentacion
             lblFechMan.Text = DateTime.Now.ToLongDateString();
             lblTimeMan.Text = DateTime.Now.ToLongTimeString();
         }
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet8.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter3.Fill(this.sARRDataSet8.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet7.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter2.Fill(this.sARRDataSet7.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet5.EXISTENCIAS' Puede moverla o quitarla según sea necesario.
-            
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet4.ACTIVOS' Puede moverla o quitarla según sea necesario.
-            this.aCTIVOSTableAdapter1.Fill(this.sARRDataSet4.ACTIVOS);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet3.MANTENIMIENTO' Puede moverla o quitarla según sea necesario.
-            this.mANTENIMIENTOTableAdapter.Fill(this.sARRDataSet3.MANTENIMIENTO);
-            // TODO: esta línea de código carga datos en la tabla 'sARRDataSet2.PERSONAL' Puede moverla o quitarla según sea necesario.
-            this.pERSONALTableAdapter.Fill(this.sARRDataSet2.PERSONAL);
+
             timer.Start();
         }
 
@@ -194,24 +185,111 @@ namespace CapaPresentacion
             txtArComTipo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
             txtArComNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
             txtArComAforo.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString().Trim();
-            txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim();
-
-            DataTable DT = cts.consultar("select ac.NOMBREACTIVO as ACTIVOS, ex.CANTIDAD,ac.OBSERVACION from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+            //cmbOperabilidad.SelectedItem.ToString().Equals(dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim());
+            //txtArComOper.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim();
+            int indice = 0;
+            indice = itemCmb(dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim());
+            cmbOperabilidad.SelectedIndex = indice;
+            DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
             dataGridView6.DataSource = DT;
+            dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView6.Columns[0].Visible = false;
 
         }
 
         private void btnInsAct_Click(object sender, EventArgs e)
         {
-
-            valCons.ingActAreaCoun("2", DatoEliminar, txtCant.Text.ToString());
+            if (txtCant.Text.ToString() == "")
+            {
+                MessageBox.Show("Especificar Cantidad");
+            }
+            else
+            {
+                try
+                {
+                    int idActivo = (int.Parse(cmbActivo.SelectedIndex.ToString())) + 1;
+                    txtCant.Text.ToString().Trim();
+                    valCons.ingActAreaCom(idActivo.ToString(), DatoEliminar, txtCant.Text.ToString().Trim());
+                }
+                catch
+                {
+                    MessageBox.Show("El activo " + cmbActivo.SelectedItem.ToString() + " ya se enceuntra asociado\n");
+                }
+                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+                dataGridView6.DataSource = DT;
+            }
+            
         }
 
-        
-
-        
-        
+        private int itemCmb(string value)
+        {
+            int Indice = 0;
+            string d = "D";
+            string m = "M";
+            string i = "I";
+            if (value == d)
+                Indice = 1;
+            if (value == m)
+                Indice = 2;
+            if (value == i)
+                Indice = 3;
+            return Indice;
         }
- 
+        private void llenarCmbActivo()
+        {
+            List<string> Activo = new List<string>();
+            try
+            {
+                DataTable DT = cts.consultar("select NOMBRE_ACT from ACTIVOS order by IDACTIVO");
+
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+
+                    Activo.Add(DT.Rows[i][0].ToString().Trim());
+                }
+                cmbActivo.DataSource = null;
+                cmbActivo.DataSource = Activo;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int idAct = int.Parse(cmbActivo.SelectedIndex.ToString())+1;
+            string message = "Desea Eliminar: " + cmbActivo.SelectedItem.ToString();
+            const string caption = "Habitación Eliminada";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    valCons.eliminarActAreaCom(idAct.ToString(), DatoEliminar);
+                    //valCons.eliminarArea(DatoEliminar);
+                }
+                catch
+                {
+                    MessageBox.Show("Activo asociado Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                limpiar();
+                DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+                dataGridView6.DataSource = DT;
+
+            }
+
+        }
+
+        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+    }
     }
 

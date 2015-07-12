@@ -50,10 +50,21 @@ namespace SAAR.Negocio
         { 
             
         }*/
-       /*Activo area comun*/
-        public void ingActAreaCoun(string idActivo, string idArCom, string cant)
+       /*Insertar Activo area comun*/
+        public void ingActAreaCom(string idActivo, string idArCom, string cant)
         {
             cst.counsultaTodoTipo("insert into EXISTENCIAS values(" + idActivo.Trim() + "," +idArCom.Trim()+ "," + cant.Trim()+ ")");
+        }
+        /*Eliminar Activo area comun*/
+        public void eliminarActAreaCom(string idActiv, string IdAreaCom)
+        { 
+            cst.counsultaTodoTipo("delete from EXISTENCIAS where IDACTIVO="+idActiv+" and IDAREACOMUN="+IdAreaCom);
+        }
+        /*Actualizar Activo area comun*/
+        // 
+        public void actualizarActAreaCom(string cant, string idAct, string idAreCom)
+        {
+            cst.counsultaTodoTipo("update EXISTENCIAS set CANTIDAD_EXISTENCIAS = "+cant +"where IDACTIVO ="+idAct+" and IDAREACOMUN="+idAreCom);
         }
     }   
 }

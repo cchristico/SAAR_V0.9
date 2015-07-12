@@ -81,7 +81,7 @@ namespace SAAR.Datos
         {
             try
             {
-               return @"Data Source=(local);Initial Catalog=SARR;Integrated Security=True";
+               return @"Data Source=(local);Initial Catalog=SAAR;Integrated Security=True";
             }
             catch (Exception)
             {
