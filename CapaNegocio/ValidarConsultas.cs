@@ -90,6 +90,11 @@ namespace SAAR.Negocio
        {
            cst.consultar("delete from ACTIVOS where IDACTIVO=" + idActivo);
        }
+       /*eliminar existencias---si se elimina activos se debe eliminar existencas*/
+       public void eliminarExistenciaAct(string idActivo)
+       {
+           cst.consultar("delete from EXISTENCIAS where IDACTIVO="+idActivo);
+       }
 
     }   
 }

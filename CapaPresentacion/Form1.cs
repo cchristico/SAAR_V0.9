@@ -226,6 +226,7 @@ namespace CapaPresentacion
             {
                 try
                 {
+                    valCons.eliminarExistenciaAct(IdActivo);
                     valCons.eliminarActivo(IdActivo);
                 }
                 catch
