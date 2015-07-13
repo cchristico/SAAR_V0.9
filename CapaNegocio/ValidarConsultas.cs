@@ -19,12 +19,12 @@ namespace SAAR.Negocio
         /*Insert*/
         public String insAreaComun(string tipo, string NomAreaCom, string Aforo, string Disp)
         {
-            int IdArea; 
+            //int IdArea; 
             try
             {
-                    DataTable DT = cst.consultar("select IDAREACOMUN from AREACOMUN order by IDAREACOMUN desc");
-                    IdArea= int.Parse(DT.Rows[0][0].ToString()) + 1;
-                    string insert = "insert into AREACOMUN values (" + IdArea.ToString() + ",'" + tipo + "','" + NomAreaCom + "'," + Aforo + ",'" + Disp + "')";
+               //     DataTable DT = cst.consultar("select IDAREACOMUN from AREACOMUN order by IDAREACOMUN desc");
+               //     IdArea= int.Parse(DT.Rows[0][0].ToString()) + 1;
+                    string insert = "insert into AREACOMUN values ('" + tipo + "','" + NomAreaCom + "'," + Aforo + ",'" + Disp + "')";
                     cst.counsultaTodoTipo(insert);
             }
             catch {

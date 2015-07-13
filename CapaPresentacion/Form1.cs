@@ -271,16 +271,16 @@ namespace CapaPresentacion
             }
             else
             {
-                try
-                {
+            //    try
+            //    {
                     int idActivo = (int.Parse(cmbActivo.SelectedIndex.ToString())) + 1;
                     txtCant.Text.ToString().Trim();
                     valCons.ingActAreaCom(idActivo.ToString(), DatoEliminar, txtCant.Text.ToString().Trim());
-                }
-                catch
-                {
+            //    }
+            //    catch
+            //    {
                     MessageBox.Show("El activo " + cmbActivo.SelectedItem.ToString() + " ya se enceuntra asociado\n");
-                }
+            //    }
                 DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
                 dataGridView6.DataSource = DT;
                 limpiar1();
