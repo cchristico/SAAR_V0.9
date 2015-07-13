@@ -201,6 +201,9 @@ namespace CapaPresentacion
             DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
             dtGridActivos.DataSource = DT1;
             llenarCmbActivo();
+            txtAcNomb.Text = "";
+            txtAcObs.Text = "";
+            txtAcCant.Text = "";
         }
 
         private void btnAcAct_Click(object sender, EventArgs e)

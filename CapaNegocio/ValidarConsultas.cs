@@ -72,10 +72,13 @@ namespace SAAR.Negocio
        /*IngresarActivos*/
         public void ingresarActivo(string nombreAct, string obsAct, string cant)
         {
-            int idActivo;
-              DataTable DT = cst.consultar("select IDACTIVO from ACTIVOS order by IDACTIVO desc");
-              idActivo = int.Parse(DT.Rows[0][0].ToString()) + 1;
-            cst.counsultaTodoTipo("insert into ACTIVOS values ("+idActivo+",'"+nombreAct+"','"+obsAct+"',"+cant+")");
+            
+            //int idActivo;
+              //DataTable DT = cst.consultar("select IDACTIVO from ACTIVOS order by IDACTIVO desc");
+             
+                  //idActivo = int.Parse(DT.Rows[0][0].ToString()) + 1;
+              
+            cst.counsultaTodoTipo("insert into ACTIVOS values ('"+nombreAct+"','"+obsAct+"',"+cant+")");
         }
        /*Actualizar Activo*/
        public void actualizarAcivo(string idAct,string nombAct, string obsAct,string cantAct)
