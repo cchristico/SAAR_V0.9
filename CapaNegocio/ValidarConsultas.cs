@@ -52,9 +52,13 @@ namespace SAAR.Negocio
             
         }*/
        /*Insertar Activo area comun*/
-        public void ingActAreaCom(string idActivo, string idArCom, string cant)
+        public void ingActAreaCom(string nombreActivo, string idArCom, string cant)
         {
-            cst.counsultaTodoTipo("insert into EXISTENCIAS values(" + idActivo.Trim() + "," +idArCom.Trim()+ "," + cant.Trim()+ ")");
+            //verificacion Nombre activo
+            string IDactivo;
+            DataTable DT = cst.consultar("select IDACTIVO from ACTIVOS where NOMBRE_ACT='" + nombreActivo + "'");
+            IDactivo = DT.Rows[0][0].ToString();
+            cst.counsultaTodoTipo("insert into EXISTENCIAS values(" + IDactivo.Trim() + "," + idArCom.Trim() + "," + cant.Trim() + ")");
         }
         /*Eliminar Activo area comun*/
         public void eliminarActAreaCom(string idActiv, string IdAreaCom)
@@ -88,12 +92,37 @@ namespace SAAR.Negocio
        /*Elmianr Activo*/
        public void eliminarActivo(string idActivo)
        {
-           cst.consultar("delete from ACTIVOS where IDACTIVO=" + idActivo);
+           cst.counsultaTodoTipo("delete from ACTIVOS where IDACTIVO="+ idActivo);
        }
        /*eliminar existencias---si se elimina activos se debe eliminar existencas*/
        public void eliminarExistenciaAct(string idActivo)
        {
-           cst.consultar("delete from EXISTENCIAS where IDACTIVO="+idActivo);
+           cst.counsultaTodoTipo("delete from EXISTENCIAS where IDACTIVO=" + idActivo);
+       }
+       /*------------------Personal---------------------*/
+       /*Insertar*/
+       public void insertarPersonal(string Nombre, string cedula)
+       {
+           cst.counsultaTodoTipo("insert into PERSONAL values('"+Nombre+"','"+cedula+"')");
+       }
+       /*Eliminar*/
+       public void elimnarPersonal(string idPersonal)
+       {
+           cst.counsultaTodoTipo("delete from PERSONAL where idpersonal = "+idPersonal);
+       }
+   /*actualizar*/
+       public void actualizarPersonal(string nomrePersonal,string idPersonal)
+       {
+           cst.counsultaTodoTipo("update PERSONAL set Apellido='"+nomrePersonal+"' where idpersonal ="+idPersonal);
+       }
+
+
+    /*----------------Manteniemiento-----------------------*/
+       public void insertarManteniemiento(string idEmpleado, string idAreaComun, string fechaMant, string obser, string costo, string tiempo)
+
+       {
+
+           cst.counsultaTodoTipo("insert into MANTENIMIENTO values("+idEmpleado+","+idAreaComun+","+fechaMant+",'"+obser+"',cast("+costo+"as money),'"+tiempo+"')");
        }
 
     }   

@@ -16,12 +16,15 @@ namespace CapaPresentacion
         CLSConsulta cts = new CLSConsulta();
         string DatoEliminar;
         string IdActivo;
+        string idPersonal;
         ValidarConsultas valCons = new ValidarConsultas();
         public Form1()
         {
             InitializeComponent();
             renderizacion();
             llenarCmbActivo();
+            llenarCmbEmpleado();
+            llenarAreComunMant();
             this.MinimumSize = new Size(750, 330);
             /*Inicialización Area Comun*/
             DataTable DT = cts.consultar("select * from AREACOMUN");
@@ -33,11 +36,22 @@ namespace CapaPresentacion
             dtGridActivos.DataSource = DT1;
             dtGridActivos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtGridActivos.Columns[0].Visible = false;
-            /**/
+
+            DataTable DTP = cts.consultar("select idpersonal, apellido as Empleado, cedula as cedula from PERSONAL");
+            dtdGrPersonal.DataSource = DTP;
+            dtdGrPersonal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtdGrPersonal.Columns[0].Visible = false;
+            /*Iniliziacion de Mantenimiento*/
+            DataTable DTM = cts.consultar("select per.apellido as 'Empleado' , ar.nombrearea as 'Area Comun',man.fecha_mant as 'Fecha',man.horario_mant as 'hora',man.costo_mant as'Costo',man.obs_mant as 'Observaciones' from MANTENIMIENTO man inner join PERSONAL per on man.idpersonal = per.idpersonal inner join AREACOMUN ar on man.idareacomun = ar.idareacomun");
+            dtbMant.DataSource = DTM;
+            dtbMant.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            /* fechas y tiempo*/
             dtTimer.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
             dateTimePicker3.CustomFormat = "HH : mm";
+            fechaMant.Format = DateTimePickerFormat.Custom;
+            fechaMant.CustomFormat = "MMM dd yyyy";
 
 
         }
@@ -86,6 +100,7 @@ namespace CapaPresentacion
             dataGridView1.DataSource = DT;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             limpiar();
+            llenarAreComunMant();
 
         }
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -154,6 +169,7 @@ namespace CapaPresentacion
                 DataTable DT = cts.consultar("select * from AREACOMUN");
                 dataGridView1.DataSource = DT;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                llenarAreComunMant();
 
 
             }
@@ -167,6 +183,7 @@ namespace CapaPresentacion
             DataTable DT = cts.consultar("select * from AREACOMUN");
             dataGridView1.DataSource = DT;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            llenarAreComunMant();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -187,6 +204,13 @@ namespace CapaPresentacion
         }
 
         /*Activos*/
+        private void dtGridActivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdActivo = dtGridActivos.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtAcNomb.Text = dtGridActivos.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtAcCant.Text = dtGridActivos.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtAcObs.Text = dtGridActivos.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
         private void limpiarActivo()
         {
             txtAcCant.Clear();
@@ -211,6 +235,8 @@ namespace CapaPresentacion
             valCons.actualizarAcivo(IdActivo, txtAcNomb.Text.ToString(), txtAcObs.Text.ToString(), txtAcCant.Text.ToString());
             DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
             dtGridActivos.DataSource = DT1;
+            DataTable DTA = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+            dataGridView6.DataSource = DTA;
             llenarCmbActivo();
         }
 
@@ -224,8 +250,8 @@ namespace CapaPresentacion
 
             if (result == DialogResult.Yes)
             {
-                try
-                {
+            try
+            {
                     valCons.eliminarExistenciaAct(IdActivo);
                     valCons.eliminarActivo(IdActivo);
                 }
@@ -239,6 +265,9 @@ namespace CapaPresentacion
                 DataTable DT1 = cts.consultar("select IDACTIVO, NOMBRE_ACT as Nombre, CANTIDAD_ACT as Cantidad,OBSERVACION_ACT as Observaciones from ACTIVOS order by IDACTIVO");
                 dtGridActivos.DataSource = DT1;
                 llenarCmbActivo();
+                /*actualizacion actAsociadp*/
+                DataTable DTA = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
+                dataGridView6.DataSource = DTA;
             }
         }
 
@@ -271,16 +300,15 @@ namespace CapaPresentacion
             }
             else
             {
-            //    try
-            //    {
-                    int idActivo = (int.Parse(cmbActivo.SelectedIndex.ToString())) + 1;
+                try
+                {
                     txtCant.Text.ToString().Trim();
-                    valCons.ingActAreaCom(idActivo.ToString(), DatoEliminar, txtCant.Text.ToString().Trim());
-            //    }
-            //    catch
-            //    {
-                    MessageBox.Show("El activo " + cmbActivo.SelectedItem.ToString() + " ya se enceuntra asociado\n");
-            //    }
+                    valCons.ingActAreaCom(cmbActivo.SelectedItem.ToString(), DatoEliminar, txtCant.Text.ToString().Trim());
+               }
+               catch
+               {
+                   MessageBox.Show("El activo " + cmbActivo.SelectedItem.ToString() + " ya se enceuntra asociado\n");
+               }
                 DataTable DT = cts.consultar("select ac.IDACTIVO ,ac.NOMBRE_ACT as Activos, ex.CANTIDAD_EXISTENCIAS as Cantidad, ac.OBSERVACION_ACT as Observaciones from ACTIVOS ac inner join EXISTENCIAS ex on ac.IDACTIVO=ex.IDACTIVO and ex.IDAREACOMUN=" + dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim());
                 dataGridView6.DataSource = DT;
                 limpiar1();
@@ -369,15 +397,130 @@ namespace CapaPresentacion
             dataGridView6.DataSource = DT;
             limpiar1();
         }
-
-        private void dtGridActivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btbAcCan_Click(object sender, EventArgs e)
         {
-            IdActivo = dtGridActivos.CurrentRow.Cells[0].Value.ToString().Trim();
-            txtAcNomb.Text = dtGridActivos.CurrentRow.Cells[1].Value.ToString().Trim();
-            txtAcCant.Text =dtGridActivos.CurrentRow.Cells[2].Value.ToString().Trim();
-            txtAcObs.Text = dtGridActivos.CurrentRow.Cells[3].Value.ToString().Trim();
+            txtAcNomb.Clear();
+            txtAcCant.Clear();
+            txtAcObs.Clear();
         }
-       
+/*-----Personal-----*/
+
+        private void dtdGrPersonal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idPersonal = dtdGrPersonal.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtPersonalNombre.Text = dtdGrPersonal.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtPersonalCedula.Text = dtdGrPersonal.CurrentRow.Cells[2].Value.ToString().Trim();
+            llenarCmbEmpleado();
+
+        }
+
+        private void btnPerGuar_Click(object sender, EventArgs e)
+        {
+            valCons.insertarPersonal(txtPersonalNombre.Text.ToString().Trim(), txtPersonalCedula.Text.ToString());
+            txtPersonalNombre.Clear(); txtPersonalCedula.Clear();
+            DataTable DTP = cts.consultar("select idpersonal, apellido as Empleado, cedula as cedula from PERSONAL");
+            dtdGrPersonal.DataSource = DTP;
+            llenarCmbEmpleado();
+
+        }
+
+        private void btnActualizarPer_Click(object sender, EventArgs e)
+        {
+            valCons.actualizarPersonal(txtPersonalNombre.Text.ToString().Trim(), idPersonal);
+            txtPersonalNombre.Clear(); txtPersonalCedula.Clear();
+            DataTable DTP = cts.consultar("select idpersonal, apellido as Empleado, cedula as cedula from PERSONAL");
+            dtdGrPersonal.DataSource = DTP;
+            llenarCmbEmpleado();
+        }
+
+        private void btnPerEli_Click(object sender, EventArgs e)
+        {
+            string message = "Desea Eliminar a: " + txtPersonalNombre.Text.ToString();
+            const string caption = "Empleado Eliminado";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    valCons.elimnarPersonal(idPersonal);
+                }
+                catch
+                {
+                    MessageBox.Show("Empleado Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            txtPersonalNombre.Clear(); txtPersonalCedula.Clear();
+            DataTable DTP = cts.consultar("select idpersonal, apellido as Empleado, cedula as cedula from PERSONAL");
+            dtdGrPersonal.DataSource = DTP;
+            llenarCmbEmpleado();
+
+        }
+  
+        /*------------------------Mantenimiento--------------*/
+
+
+
+
+
+
+
+
+
+
+        /*llenarComboboxEmpleado*/
+        private void llenarCmbEmpleado()
+        {
+            List<string> Activo = new List<string>();
+            try
+            {
+                DataTable DT = cts.consultar("select Apellido from PERSONAL");
+
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+
+                    Activo.Add(DT.Rows[i][0].ToString().Trim());
+                }
+                cmbEmpleado.DataSource = null;
+                cmbEmpleado.DataSource = Activo;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        /*llenar areacomun manteniemiento*/
+         private void llenarAreComunMant()
+        {
+            List<string> Activo = new List<string>();
+            try
+            {
+                DataTable DT = cts.consultar("select nombrearea from AREACOMUN");
+
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+
+                    Activo.Add(DT.Rows[i][0].ToString().Trim());
+                }
+                cmbAreaComun.DataSource = null;
+                cmbAreaComun.DataSource = Activo;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+        private void btnManIng_Click(object sender, EventArgs e)
+        {
+            string fechaMantenimiento;
+                fechaMantenimiento = fechaMant.ToString().Substring(43, 11);
+                MessageBox.Show(fechaMantenimiento);
+        }
+
     }
     }
 
