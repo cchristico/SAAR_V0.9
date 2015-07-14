@@ -125,5 +125,22 @@ namespace SAAR.Negocio
            cst.counsultaTodoTipo("insert into MANTENIMIENTO values("+idEmpleado+","+idAreaComun+","+fechaMant+",'"+obser+"',cast("+costo+"as money),'"+tiempo+"')");
        }
 
+       /*------------------Propietario---------------------*/
+       /*Insertar*/
+       public void insertarPropietario(string cedula, string Apellido, string Nombre)
+       {
+           cst.counsultaTodoTipo("insert into PROPIETARIOS values('" + cedula + "','" + Apellido + "','" + Nombre + "')");
+       }
+       /*Eliminar*/
+       public void elimnarPropietario(string idPersonal)
+       {
+           cst.counsultaTodoTipo("delete from PROPIETARIOS where idpersonal = " + idPersonal);
+       }
+       /*actualizar*/
+       public void actualizarPropietario(string nomrePersonal, string idPersonal)
+       {
+           cst.counsultaTodoTipo("update PROPIETARIOS set Apellido='" + nomrePersonal + "' where idpersonal =" + idPersonal);
+       }
+
     }   
 }

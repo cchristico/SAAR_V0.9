@@ -199,6 +199,8 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'sAARDataSet.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
+            this.pROPIETARIOSTableAdapter.Fill(this.sAARDataSet.PROPIETARIOS);
 
             timer.Start();
         }
@@ -519,6 +521,19 @@ namespace CapaPresentacion
             string fechaMantenimiento;
                 fechaMantenimiento = fechaMant.ToString().Substring(43, 11);
                 MessageBox.Show(fechaMantenimiento);
+        }
+        //----------------------Propietario--------------------------------
+        private void button4_Click(object sender, EventArgs e)
+        {
+            valCons.insertarPropietario(txtPropietarioCI.Text.ToString(), txtPropietarioNombre.Text.ToString(), txtPropietarioApellido.Text.ToString());
+            txtPropietarioCI.Clear(); txtPropietarioApellido.Clear(); txtPropietarioNombre.Clear();
+            DataTable DTP = cts.consultar("select CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
+            dataGridPropietario.DataSource = DTP;
+        }
+
+        private void btnActualizarProp_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
