@@ -17,6 +17,7 @@ namespace CapaPresentacion
         string DatoEliminar;
         string IdActivo;
         string idPersonal;
+        int index;
         ValidarConsultas valCons = new ValidarConsultas();
         public Form1()
         {
@@ -335,11 +336,13 @@ namespace CapaPresentacion
         private void llenarCmbActivo()
         {
             List<string> Activo = new List<string>();
+
             try
             {
                 DataTable DT = cts.consultar("select NOMBRE_ACT from ACTIVOS order by IDACTIVO");
+                Activo.Add("");
 
-                for (int i = 0; i < DT.Rows.Count; i++)
+                for (int i = 1; i < DT.Rows.Count; i++)
                 {
 
                     Activo.Add(DT.Rows[i][0].ToString().Trim());
@@ -386,7 +389,7 @@ namespace CapaPresentacion
         private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idAct= int.Parse(dataGridView6.CurrentRow.Cells[0].Value.ToString().Trim())-1;
-            cmbActivo.SelectedIndex = idAct;
+            cmbActivo.SelectedItem.Equals(dataGridView6.CurrentRow.Cells[1].Value.ToString().Trim());
             txtCant.Text = dataGridView6.CurrentRow.Cells[2].Value.ToString().Trim();
             txtObs.Text = dataGridView6.CurrentRow.Cells[3].Value.ToString().Trim();
         }
@@ -476,18 +479,18 @@ namespace CapaPresentacion
         /*llenarComboboxEmpleado*/
         private void llenarCmbEmpleado()
         {
-            List<string> Activo = new List<string>();
+            List<string> empleado = new List<string>();
             try
             {
                 DataTable DT = cts.consultar("select Apellido from PERSONAL");
-
+                empleado.Add("");
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
 
-                    Activo.Add(DT.Rows[i][0].ToString().Trim());
+                    empleado.Add(DT.Rows[i][0].ToString().Trim());
                 }
                 cmbEmpleado.DataSource = null;
-                cmbEmpleado.DataSource = Activo;
+                cmbEmpleado.DataSource = empleado;
             }
             catch
             {
@@ -497,25 +500,43 @@ namespace CapaPresentacion
         /*llenar areacomun manteniemiento*/
          private void llenarAreComunMant()
         {
-            List<string> Activo = new List<string>();
+            List<string> areaComun = new List<string>();
             try
             {
                 DataTable DT = cts.consultar("select nombrearea from AREACOMUN");
-
+                areaComun.Add("");
+                
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
 
-                    Activo.Add(DT.Rows[i][0].ToString().Trim());
+                    areaComun.Add(DT.Rows[i][0].ToString().Trim());
                 }
                 cmbAreaComun.DataSource = null;
-                cmbAreaComun.DataSource = Activo;
+                cmbAreaComun.DataSource = areaComun;
             }
             catch
             {
                 throw;
             }
         }
-        
+
+         
+    private int indiceCmb (List<string> areaComun, string Nombre )
+    {
+    
+        for (int i = 0; i < areaComun.Count; i++)
+        {
+            if (areaComun[i] == Nombre)
+            {
+                index = i;
+                break;
+            }
+                
+            
+        }
+        return index;        
+    }
+
         private void btnManIng_Click(object sender, EventArgs e)
         {
             string fechaMantenimiento;
