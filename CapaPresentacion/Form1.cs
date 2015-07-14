@@ -17,6 +17,7 @@ namespace CapaPresentacion
         string DatoEliminar;
         string IdActivo;
         string idPersonal;
+        string idPropietario;
         int index;
         ValidarConsultas valCons = new ValidarConsultas();
         public Form1()
@@ -53,8 +54,11 @@ namespace CapaPresentacion
             dateTimePicker3.CustomFormat = "HH : mm";
             fechaMant.Format = DateTimePickerFormat.Custom;
             fechaMant.CustomFormat = "MMM dd yyyy";
-
-
+            /*Propietario*/
+            DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
+            dataGridPropietario.DataSource = DTProp;
+            dataGridPropietario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridPropietario.Columns[0].Visible = false;
         }
 
         private void txtArComTipo_KeyPress(object sender, KeyPressEventArgs e)
@@ -201,7 +205,7 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'sAARDataSet.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
-            this.pROPIETARIOSTableAdapter.Fill(this.sAARDataSet.PROPIETARIOS);
+
 
             timer.Start();
         }
@@ -548,13 +552,54 @@ namespace CapaPresentacion
         {
             valCons.insertarPropietario(txtPropietarioCI.Text.ToString(), txtPropietarioNombre.Text.ToString(), txtPropietarioApellido.Text.ToString());
             txtPropietarioCI.Clear(); txtPropietarioApellido.Clear(); txtPropietarioNombre.Clear();
-            DataTable DTP = cts.consultar("select CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
-            dataGridPropietario.DataSource = DTP;
+            DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
+            dataGridPropietario.DataSource = DTProp;
         }
 
         private void btnActualizarProp_Click(object sender, EventArgs e)
         {
+            valCons.actualizarPropietario(txtPropietarioCI.Text.ToString().Trim(), txtPropietarioApellido.Text.ToString().Trim(), txtPropietarioNombre.Text.ToString().Trim(), idPropietario);
+            txtPropietarioCI.Clear(); txtPropietarioApellido.Clear(); txtPropietarioNombre.Clear();
+            DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
+            dataGridPropietario.DataSource = DTProp;
+        }
 
+        private void dataGridPropietario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idPropietario = dataGridPropietario.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtPropietarioCI.Text = dataGridPropietario.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtPropietarioApellido.Text = dataGridPropietario.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtPropietarioNombre.Text = dataGridPropietario.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
+
+        private void btnCancelarProp_Click(object sender, EventArgs e)
+        {
+            txtPropietarioCI.Clear(); txtPropietarioApellido.Clear(); txtPropietarioNombre.Clear();
+        }
+
+        private void btnEliminarProp_Click(object sender, EventArgs e)
+        {
+            string message = "Desea Eliminar a: " + txtPropietarioNombre.Text.ToString()+" "+ txtPropietarioApellido.Text.ToString();
+            const string caption = "Propietario Eliminado";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    valCons.elimnarPropietario(idPropietario);
+                }
+                catch
+                {
+                    MessageBox.Show("Propietario Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            txtPersonalNombre.Clear(); txtPersonalCedula.Clear();
+            DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
+            dataGridPropietario.DataSource = DTProp;
         }
 
     }

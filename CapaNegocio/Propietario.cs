@@ -11,7 +11,6 @@ namespace SAAR.Negocio
         public static string NumeroCedula { get; set; }
         public static string NombreUsr { get; set; }
         public static string AplellidoUsr { get; set; } 
-        //Purueba github 
     }
 
 }

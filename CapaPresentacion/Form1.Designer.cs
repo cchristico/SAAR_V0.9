@@ -189,7 +189,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridPropietario = new System.Windows.Forms.DataGridView();
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sAARDataSet = new SARR.Presentacion.SAARDataSet();
             this.splitContainer38 = new System.Windows.Forms.SplitContainer();
             this.btnIngresarProp = new System.Windows.Forms.Button();
             this.splitContainer39 = new System.Windows.Forms.SplitContainer();
@@ -199,10 +198,6 @@
             this.btnEliminarProp = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.pROPIETARIOSTableAdapter = new SARR.Presentacion.SAARDataSetTableAdapters.PROPIETARIOSTableAdapter();
-            this.cIPROPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMBREPROPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aPELLIDOPROPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -376,7 +371,6 @@
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPropietario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAARDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer38)).BeginInit();
             this.splitContainer38.Panel1.SuspendLayout();
             this.splitContainer38.Panel2.SuspendLayout();
@@ -2238,29 +2232,18 @@
             // 
             // dataGridPropietario
             // 
-            this.dataGridPropietario.AutoGenerateColumns = false;
             this.dataGridPropietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPropietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cIPROPDataGridViewTextBoxColumn,
-            this.nOMBREPROPDataGridViewTextBoxColumn,
-            this.aPELLIDOPROPDataGridViewTextBoxColumn});
-            this.dataGridPropietario.DataSource = this.pROPIETARIOSBindingSource;
             this.dataGridPropietario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPropietario.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridPropietario.Location = new System.Drawing.Point(0, 0);
             this.dataGridPropietario.Name = "dataGridPropietario";
             this.dataGridPropietario.Size = new System.Drawing.Size(634, 378);
             this.dataGridPropietario.TabIndex = 0;
+            this.dataGridPropietario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPropietario_CellContentClick);
             // 
             // pROPIETARIOSBindingSource
             // 
             this.pROPIETARIOSBindingSource.DataMember = "PROPIETARIOS";
-            this.pROPIETARIOSBindingSource.DataSource = this.sAARDataSet;
-            // 
-            // sAARDataSet
-            // 
-            this.sAARDataSet.DataSetName = "SAARDataSet";
-            this.sAARDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer38
             // 
@@ -2344,6 +2327,7 @@
             this.btnCancelarProp.TabIndex = 2;
             this.btnCancelarProp.Text = "Cancelar";
             this.btnCancelarProp.UseVisualStyleBackColor = true;
+            this.btnCancelarProp.Click += new System.EventHandler(this.btnCancelarProp_Click);
             // 
             // btnEliminarProp
             // 
@@ -2354,32 +2338,11 @@
             this.btnEliminarProp.TabIndex = 2;
             this.btnEliminarProp.Text = "Eliminar";
             this.btnEliminarProp.UseVisualStyleBackColor = true;
+            this.btnEliminarProp.Click += new System.EventHandler(this.btnEliminarProp_Click);
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pROPIETARIOSTableAdapter
-            // 
-            this.pROPIETARIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // cIPROPDataGridViewTextBoxColumn
-            // 
-            this.cIPROPDataGridViewTextBoxColumn.DataPropertyName = "CIPROP";
-            this.cIPROPDataGridViewTextBoxColumn.HeaderText = "Cedula";
-            this.cIPROPDataGridViewTextBoxColumn.Name = "cIPROPDataGridViewTextBoxColumn";
-            // 
-            // nOMBREPROPDataGridViewTextBoxColumn
-            // 
-            this.nOMBREPROPDataGridViewTextBoxColumn.DataPropertyName = "NOMBREPROP";
-            this.nOMBREPROPDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nOMBREPROPDataGridViewTextBoxColumn.Name = "nOMBREPROPDataGridViewTextBoxColumn";
-            // 
-            // aPELLIDOPROPDataGridViewTextBoxColumn
-            // 
-            this.aPELLIDOPROPDataGridViewTextBoxColumn.DataPropertyName = "APELLIDOPROP";
-            this.aPELLIDOPROPDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.aPELLIDOPROPDataGridViewTextBoxColumn.Name = "aPELLIDOPROPDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -2577,7 +2540,6 @@
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPropietario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAARDataSet)).EndInit();
             this.splitContainer38.Panel1.ResumeLayout(false);
             this.splitContainer38.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer38)).EndInit();
@@ -2764,9 +2726,7 @@
         private System.Windows.Forms.SplitContainer splitContainer40;
         private System.Windows.Forms.Button btnCancelarProp;
         private System.Windows.Forms.Button btnEliminarProp;
-        private SARR.Presentacion.SAARDataSet sAARDataSet;
         private System.Windows.Forms.BindingSource pROPIETARIOSBindingSource;
-        private SARR.Presentacion.SAARDataSetTableAdapters.PROPIETARIOSTableAdapter pROPIETARIOSTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIPROPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREPROPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aPELLIDOPROPDataGridViewTextBoxColumn;

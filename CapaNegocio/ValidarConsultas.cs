@@ -132,14 +132,14 @@ namespace SAAR.Negocio
            cst.counsultaTodoTipo("insert into PROPIETARIOS values('" + cedula + "','" + Apellido + "','" + Nombre + "')");
        }
        /*Eliminar*/
-       public void elimnarPropietario(string idPersonal)
+       public void elimnarPropietario(string idPropietarios)
        {
-           cst.counsultaTodoTipo("delete from PROPIETARIOS where idpersonal = " + idPersonal);
+           cst.counsultaTodoTipo("delete from PROPIETARIOS where IDPROP = " + idPropietarios);
        }
        /*actualizar*/
-       public void actualizarPropietario(string nomrePersonal, string idPersonal)
+       public void actualizarPropietario(string cedula, string Apellido, string Nombre, string idPropietarios)
        {
-           cst.counsultaTodoTipo("update PROPIETARIOS set Apellido='" + nomrePersonal + "' where idpersonal =" + idPersonal);
+           cst.counsultaTodoTipo("update PROPIETARIOS set CIPROP='" + cedula + "',APELLIDOPROP='" + Apellido + "',NOMBREPROP='" + Nombre + "' where IDPROP = " + idPropietarios);
        }
 
     }   
