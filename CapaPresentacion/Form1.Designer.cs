@@ -165,18 +165,6 @@
             this.splitContainer26 = new System.Windows.Forms.SplitContainer();
             this.btnPerCan = new System.Windows.Forms.Button();
             this.btnPerEli = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.splitContainer36 = new System.Windows.Forms.SplitContainer();
             this.splitContainer37 = new System.Windows.Forms.SplitContainer();
@@ -188,7 +176,6 @@
             this.txtPropietarioCI = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridPropietario = new System.Windows.Forms.DataGridView();
-            this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer38 = new System.Windows.Forms.SplitContainer();
             this.btnIngresarProp = new System.Windows.Forms.Button();
             this.splitContainer39 = new System.Windows.Forms.SplitContainer();
@@ -196,6 +183,7 @@
             this.splitContainer40 = new System.Windows.Forms.SplitContainer();
             this.btnCancelarProp = new System.Windows.Forms.Button();
             this.btnEliminarProp = new System.Windows.Forms.Button();
+            this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -356,9 +344,6 @@
             this.splitContainer26.Panel1.SuspendLayout();
             this.splitContainer26.Panel2.SuspendLayout();
             this.splitContainer26.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer36)).BeginInit();
             this.splitContainer36.Panel1.SuspendLayout();
@@ -370,7 +355,6 @@
             this.splitContainer37.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPropietario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer38)).BeginInit();
             this.splitContainer38.Panel1.SuspendLayout();
             this.splitContainer38.Panel2.SuspendLayout();
@@ -383,6 +367,7 @@
             this.splitContainer40.Panel1.SuspendLayout();
             this.splitContainer40.Panel2.SuspendLayout();
             this.splitContainer40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -403,8 +388,6 @@
             this.AreasComunes.Controls.Add(this.tabReuniones);
             this.AreasComunes.Controls.Add(this.TabActivos);
             this.AreasComunes.Controls.Add(this.tabPage5);
-            this.AreasComunes.Controls.Add(this.tabPage4);
-            this.AreasComunes.Controls.Add(this.tabPage6);
             this.AreasComunes.Controls.Add(this.tabPage7);
             this.AreasComunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreasComunes.Location = new System.Drawing.Point(12, 12);
@@ -2000,124 +1983,9 @@
             this.btnPerEli.UseVisualStyleBackColor = true;
             this.btnPerEli.Click += new System.EventHandler(this.btnPerEli_Click);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Controls.Add(this.pictureBox3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1211, 508);
-            this.tabPage4.TabIndex = 6;
-            this.tabPage4.Text = "Reglamento";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::SARR.Presentacion.Properties.Resources.Captura1;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1205, 502);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Controls.Add(this.comboBox2);
-            this.tabPage6.Controls.Add(this.label4);
-            this.tabPage6.Controls.Add(this.button1);
-            this.tabPage6.Controls.Add(this.dateTimePicker2);
-            this.tabPage6.Controls.Add(this.dateTimePicker1);
-            this.tabPage6.Controls.Add(this.label3);
-            this.tabPage6.Controls.Add(this.label2);
-            this.tabPage6.Controls.Add(this.comboBox1);
-            this.tabPage6.Controls.Add(this.label1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1211, 508);
-            this.tabPage6.TabIndex = 7;
-            this.tabPage6.Text = "Reportes";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(400, 34);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tipo:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(41, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(321, 123);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(27, 123);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Fecha Fin";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha Incio";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Reporte:";
-            // 
             // tabPage7
             // 
+            this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage7.Controls.Add(this.splitContainer36);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
@@ -2125,7 +1993,6 @@
             this.tabPage7.Size = new System.Drawing.Size(1211, 508);
             this.tabPage7.TabIndex = 8;
             this.tabPage7.Text = "Propietarios";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // splitContainer36
             // 
@@ -2184,14 +2051,14 @@
             this.txtPropietarioNombre.Location = new System.Drawing.Point(136, 105);
             this.txtPropietarioNombre.Name = "txtPropietarioNombre";
             this.txtPropietarioNombre.Size = new System.Drawing.Size(251, 26);
-            this.txtPropietarioNombre.TabIndex = 6;
+            this.txtPropietarioNombre.TabIndex = 2;
             // 
             // txtPropietarioApellido
             // 
             this.txtPropietarioApellido.Location = new System.Drawing.Point(136, 63);
             this.txtPropietarioApellido.Name = "txtPropietarioApellido";
             this.txtPropietarioApellido.Size = new System.Drawing.Size(251, 26);
-            this.txtPropietarioApellido.TabIndex = 6;
+            this.txtPropietarioApellido.TabIndex = 1;
             // 
             // label28
             // 
@@ -2218,7 +2085,7 @@
             this.txtPropietarioCI.Location = new System.Drawing.Point(136, 26);
             this.txtPropietarioCI.Name = "txtPropietarioCI";
             this.txtPropietarioCI.Size = new System.Drawing.Size(118, 26);
-            this.txtPropietarioCI.TabIndex = 4;
+            this.txtPropietarioCI.TabIndex = 0;
             // 
             // label27
             // 
@@ -2240,10 +2107,6 @@
             this.dataGridPropietario.Size = new System.Drawing.Size(634, 378);
             this.dataGridPropietario.TabIndex = 0;
             this.dataGridPropietario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPropietario_CellContentClick);
-            // 
-            // pROPIETARIOSBindingSource
-            // 
-            this.pROPIETARIOSBindingSource.DataMember = "PROPIETARIOS";
             // 
             // splitContainer38
             // 
@@ -2268,7 +2131,7 @@
             this.btnIngresarProp.Location = new System.Drawing.Point(79, 28);
             this.btnIngresarProp.Name = "btnIngresarProp";
             this.btnIngresarProp.Size = new System.Drawing.Size(102, 29);
-            this.btnIngresarProp.TabIndex = 2;
+            this.btnIngresarProp.TabIndex = 0;
             this.btnIngresarProp.Text = "Ingresar";
             this.btnIngresarProp.UseVisualStyleBackColor = true;
             this.btnIngresarProp.Click += new System.EventHandler(this.button4_Click);
@@ -2296,7 +2159,7 @@
             this.btnActualizarProp.Location = new System.Drawing.Point(81, 28);
             this.btnActualizarProp.Name = "btnActualizarProp";
             this.btnActualizarProp.Size = new System.Drawing.Size(102, 29);
-            this.btnActualizarProp.TabIndex = 3;
+            this.btnActualizarProp.TabIndex = 0;
             this.btnActualizarProp.Text = "Actualziar";
             this.btnActualizarProp.UseVisualStyleBackColor = true;
             this.btnActualizarProp.Click += new System.EventHandler(this.btnActualizarProp_Click);
@@ -2324,7 +2187,7 @@
             this.btnCancelarProp.Location = new System.Drawing.Point(86, 28);
             this.btnCancelarProp.Name = "btnCancelarProp";
             this.btnCancelarProp.Size = new System.Drawing.Size(102, 29);
-            this.btnCancelarProp.TabIndex = 2;
+            this.btnCancelarProp.TabIndex = 0;
             this.btnCancelarProp.Text = "Cancelar";
             this.btnCancelarProp.UseVisualStyleBackColor = true;
             this.btnCancelarProp.Click += new System.EventHandler(this.btnCancelarProp_Click);
@@ -2335,10 +2198,14 @@
             this.btnEliminarProp.Location = new System.Drawing.Point(40, 28);
             this.btnEliminarProp.Name = "btnEliminarProp";
             this.btnEliminarProp.Size = new System.Drawing.Size(102, 29);
-            this.btnEliminarProp.TabIndex = 2;
+            this.btnEliminarProp.TabIndex = 0;
             this.btnEliminarProp.Text = "Eliminar";
             this.btnEliminarProp.UseVisualStyleBackColor = true;
             this.btnEliminarProp.Click += new System.EventHandler(this.btnEliminarProp_Click);
+            // 
+            // pROPIETARIOSBindingSource
+            // 
+            this.pROPIETARIOSBindingSource.DataMember = "PROPIETARIOS";
             // 
             // timer
             // 
@@ -2523,10 +2390,6 @@
             this.splitContainer26.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer26)).EndInit();
             this.splitContainer26.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.splitContainer36.Panel1.ResumeLayout(false);
             this.splitContainer36.Panel2.ResumeLayout(false);
@@ -2539,7 +2402,6 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPropietario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             this.splitContainer38.Panel1.ResumeLayout(false);
             this.splitContainer38.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer38)).EndInit();
@@ -2552,6 +2414,7 @@
             this.splitContainer40.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer40)).EndInit();
             this.splitContainer40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
@@ -2591,7 +2454,6 @@
         private System.Windows.Forms.SplitContainer splitContainer22;
         private System.Windows.Forms.Button btbAcCan;
         private System.Windows.Forms.Button btbAcElim;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.SplitContainer splitContainer23;
         private System.Windows.Forms.SplitContainer splitContainer24;
         private System.Windows.Forms.SplitContainer splitContainer25;
@@ -2599,21 +2461,10 @@
         private System.Windows.Forms.SplitContainer splitContainer26;
         private System.Windows.Forms.Button btnPerCan;
         private System.Windows.Forms.Button btnPerEli;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer4;
