@@ -73,16 +73,6 @@
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer28 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer30 = new System.Windows.Forms.SplitContainer();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dtTimer = new System.Windows.Forms.DateTimePicker();
-            this.splitContainer29 = new System.Windows.Forms.SplitContainer();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.mntCalendar = new System.Windows.Forms.MonthCalendar();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.lblTime2 = new System.Windows.Forms.Label();
             this.lblDate2 = new System.Windows.Forms.Label();
@@ -186,6 +176,28 @@
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.splitContainer29 = new System.Windows.Forms.SplitContainer();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtTimer = new System.Windows.Forms.DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dtTimer1 = new System.Windows.Forms.DateTimePicker();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.splitContainer28 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer30 = new System.Windows.Forms.SplitContainer();
+            this.mntCalendar = new System.Windows.Forms.MonthCalendar();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -238,19 +250,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer28)).BeginInit();
-            this.splitContainer28.Panel1.SuspendLayout();
-            this.splitContainer28.Panel2.SuspendLayout();
-            this.splitContainer28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer30)).BeginInit();
-            this.splitContainer30.Panel1.SuspendLayout();
-            this.splitContainer30.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer29)).BeginInit();
-            this.splitContainer29.Panel1.SuspendLayout();
-            this.splitContainer29.Panel2.SuspendLayout();
-            this.splitContainer29.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -369,6 +368,21 @@
             this.splitContainer40.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer29)).BeginInit();
+            this.splitContainer29.Panel1.SuspendLayout();
+            this.splitContainer29.Panel2.SuspendLayout();
+            this.splitContainer29.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer28)).BeginInit();
+            this.splitContainer28.Panel2.SuspendLayout();
+            this.splitContainer28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer30)).BeginInit();
+            this.splitContainer30.Panel1.SuspendLayout();
+            this.splitContainer30.Panel2.SuspendLayout();
+            this.splitContainer30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -919,119 +933,6 @@
             this.splitContainer3.Size = new System.Drawing.Size(1205, 502);
             this.splitContainer3.SplitterDistance = 400;
             this.splitContainer3.TabIndex = 0;
-            // 
-            // splitContainer28
-            // 
-            this.splitContainer28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer28.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer28.Name = "splitContainer28";
-            this.splitContainer28.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer28.Panel1
-            // 
-            this.splitContainer28.Panel1.Controls.Add(this.splitContainer30);
-            // 
-            // splitContainer28.Panel2
-            // 
-            this.splitContainer28.Panel2.Controls.Add(this.splitContainer29);
-            this.splitContainer28.Size = new System.Drawing.Size(1205, 400);
-            this.splitContainer28.SplitterDistance = 39;
-            this.splitContainer28.TabIndex = 0;
-            // 
-            // splitContainer30
-            // 
-            this.splitContainer30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer30.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer30.Name = "splitContainer30";
-            // 
-            // splitContainer30.Panel1
-            // 
-            this.splitContainer30.Panel1.Controls.Add(this.panel2);
-            this.splitContainer30.Panel1.Controls.Add(this.dtTimer);
-            this.splitContainer30.Size = new System.Drawing.Size(1205, 39);
-            this.splitContainer30.SplitterDistance = 326;
-            this.splitContainer30.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(71, 7);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 29);
-            this.panel2.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(4, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "hh:mm";
-            // 
-            // dtTimer
-            // 
-            this.dtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtTimer.Location = new System.Drawing.Point(12, 8);
-            this.dtTimer.Name = "dtTimer";
-            this.dtTimer.Size = new System.Drawing.Size(200, 26);
-            this.dtTimer.TabIndex = 0;
-            // 
-            // splitContainer29
-            // 
-            this.splitContainer29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer29.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer29.Name = "splitContainer29";
-            // 
-            // splitContainer29.Panel1
-            // 
-            this.splitContainer29.Panel1.Controls.Add(this.groupBox2);
-            // 
-            // splitContainer29.Panel2
-            // 
-            this.splitContainer29.Panel2.Controls.Add(this.mntCalendar);
-            this.splitContainer29.Size = new System.Drawing.Size(1205, 357);
-            this.splitContainer29.SplitterDistance = 344;
-            this.splitContainer29.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Location = new System.Drawing.Point(3, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(338, 342);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Reserva";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(145, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 1;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(9, 35);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 20);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Area Comun";
-            // 
-            // mntCalendar
-            // 
-            this.mntCalendar.CalendarDimensions = new System.Drawing.Size(3, 1);
-            this.mntCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mntCalendar.Location = new System.Drawing.Point(64, 35);
-            this.mntCalendar.Name = "mntCalendar";
-            this.mntCalendar.TabIndex = 2;
             // 
             // splitContainer5
             // 
@@ -1985,7 +1886,7 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tabPage7.Controls.Add(this.splitContainer36);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
@@ -2211,6 +2112,239 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // splitContainer29
+            // 
+            this.splitContainer29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer29.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer29.Name = "splitContainer29";
+            // 
+            // splitContainer29.Panel1
+            // 
+            this.splitContainer29.Panel1.Controls.Add(this.groupBox2);
+            // 
+            // splitContainer29.Panel2
+            // 
+            this.splitContainer29.Panel2.Controls.Add(this.splitContainer30);
+            this.splitContainer29.Size = new System.Drawing.Size(1205, 371);
+            this.splitContainer29.SplitterDistance = 475;
+            this.splitContainer29.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel6);
+            this.groupBox2.Controls.Add(this.dtTimer1);
+            this.groupBox2.Controls.Add(this.panel5);
+            this.groupBox2.Controls.Add(this.dtTimer);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox2.Location = new System.Drawing.Point(3, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(459, 342);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos Reserva";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(6, 40);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 20);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Area Comun";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(146, 32);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(249, 28);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(6, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Propietario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(5, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Fecha";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(6, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Hora inicio";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(6, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Hora fin";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label29.Location = new System.Drawing.Point(6, 233);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(114, 20);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Observaciones";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(146, 81);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(249, 26);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(146, 227);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(307, 109);
+            this.textBox4.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(146, 114);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // dtTimer
+            // 
+            this.dtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimer.Location = new System.Drawing.Point(143, 147);
+            this.dtTimer.Name = "dtTimer";
+            this.dtTimer.Size = new System.Drawing.Size(200, 26);
+            this.dtTimer.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label30);
+            this.panel5.Location = new System.Drawing.Point(202, 146);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(144, 29);
+            this.panel5.TabIndex = 11;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(4, 4);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 20);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "hh:mm";
+            // 
+            // dtTimer1
+            // 
+            this.dtTimer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimer1.Location = new System.Drawing.Point(143, 184);
+            this.dtTimer1.Name = "dtTimer1";
+            this.dtTimer1.Size = new System.Drawing.Size(200, 26);
+            this.dtTimer1.TabIndex = 12;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label31);
+            this.panel6.Location = new System.Drawing.Point(202, 183);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(144, 29);
+            this.panel6.TabIndex = 13;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(4, 4);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(57, 20);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "hh:mm";
+            // 
+            // splitContainer28
+            // 
+            this.splitContainer28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer28.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer28.Name = "splitContainer28";
+            this.splitContainer28.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer28.Panel2
+            // 
+            this.splitContainer28.Panel2.Controls.Add(this.splitContainer29);
+            this.splitContainer28.Size = new System.Drawing.Size(1205, 400);
+            this.splitContainer28.SplitterDistance = 25;
+            this.splitContainer28.TabIndex = 0;
+            // 
+            // splitContainer30
+            // 
+            this.splitContainer30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer30.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer30.Name = "splitContainer30";
+            this.splitContainer30.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer30.Panel1
+            // 
+            this.splitContainer30.Panel1.Controls.Add(this.mntCalendar);
+            // 
+            // splitContainer30.Panel2
+            // 
+            this.splitContainer30.Panel2.Controls.Add(this.dataGridView2);
+            this.splitContainer30.Size = new System.Drawing.Size(726, 371);
+            this.splitContainer30.SplitterDistance = 176;
+            this.splitContainer30.TabIndex = 0;
+            // 
+            // mntCalendar
+            // 
+            this.mntCalendar.CalendarDimensions = new System.Drawing.Size(3, 1);
+            this.mntCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mntCalendar.Location = new System.Drawing.Point(0, 12);
+            this.mntCalendar.Name = "mntCalendar";
+            this.mntCalendar.TabIndex = 3;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(726, 191);
+            this.dataGridView2.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2276,21 +2410,6 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.splitContainer28.Panel1.ResumeLayout(false);
-            this.splitContainer28.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer28)).EndInit();
-            this.splitContainer28.ResumeLayout(false);
-            this.splitContainer30.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer30)).EndInit();
-            this.splitContainer30.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.splitContainer29.Panel1.ResumeLayout(false);
-            this.splitContainer29.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer29)).EndInit();
-            this.splitContainer29.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
@@ -2416,6 +2535,24 @@
             this.splitContainer40.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
+            this.splitContainer29.Panel1.ResumeLayout(false);
+            this.splitContainer29.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer29)).EndInit();
+            this.splitContainer29.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.splitContainer28.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer28)).EndInit();
+            this.splitContainer28.ResumeLayout(false);
+            this.splitContainer30.Panel1.ResumeLayout(false);
+            this.splitContainer30.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer30)).EndInit();
+            this.splitContainer30.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2478,22 +2615,14 @@
         private System.Windows.Forms.SplitContainer splitContainer27;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.SplitContainer splitContainer28;
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.SplitContainer splitContainer10;
-        private System.Windows.Forms.SplitContainer splitContainer29;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblTime2;
         private System.Windows.Forms.Label lblDate2;
-        private System.Windows.Forms.SplitContainer splitContainer30;
-        private System.Windows.Forms.DateTimePicker dtTimer;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MonthCalendar mntCalendar;
         private System.Windows.Forms.SplitContainer splitContainer31;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView6;
@@ -2532,8 +2661,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblTimeMan;
         private System.Windows.Forms.Label lblFechMan;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox cmbOperabilidad;
         private System.Windows.Forms.Button button3;
@@ -2578,9 +2705,28 @@
         private System.Windows.Forms.Button btnCancelarProp;
         private System.Windows.Forms.Button btnEliminarProp;
         private System.Windows.Forms.BindingSource pROPIETARIOSBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIPROPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREPROPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aPELLIDOPROPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.SplitContainer splitContainer28;
+        private System.Windows.Forms.SplitContainer splitContainer29;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.DateTimePicker dtTimer1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DateTimePicker dtTimer;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.SplitContainer splitContainer30;
+        private System.Windows.Forms.MonthCalendar mntCalendar;
+        private System.Windows.Forms.DataGridView dataGridView2;
         
 
     }

@@ -51,6 +51,10 @@ namespace CapaPresentacion
             dtTimer.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
+            dtTimer1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+            dtTimer1.CustomFormat = "HH : mm";
+
             dateTimePicker3.CustomFormat = "HH : mm";
             fechaMant.Format = DateTimePickerFormat.Custom;
             fechaMant.CustomFormat = "MMM dd yyyy";
@@ -471,15 +475,6 @@ namespace CapaPresentacion
   
         /*------------------------Mantenimiento--------------*/
 
-
-
-
-
-
-
-
-
-
         /*llenarComboboxEmpleado*/
         private void llenarCmbEmpleado()
         {
@@ -517,6 +512,7 @@ namespace CapaPresentacion
                 }
                 cmbAreaComun.DataSource = null;
                 cmbAreaComun.DataSource = areaComun;
+                comboBox1.DataSource = areaComun;
             }
             catch
             {
