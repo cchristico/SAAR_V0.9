@@ -58,6 +58,8 @@ namespace CapaPresentacion
             tiempoMante.CustomFormat = "HH : mm";
             fechaMant.Format = DateTimePickerFormat.Custom;
             fechaMant.CustomFormat = "yyy MM dd";
+            horaReunion.CustomFormat = "HH : mm";
+            horaReunion.Format = DateTimePickerFormat.Custom;
             /*Propietario*/
             DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
             dataGridPropietario.DataSource = DTProp;
@@ -607,6 +609,11 @@ namespace CapaPresentacion
         /*Manteniemietno*/
 
         private void dtbMant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -199,6 +199,17 @@
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.horaReunion = new System.Windows.Forms.DateTimePicker();
+            this.fechaReunion = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -300,6 +311,7 @@
             this.splitContainer15.Panel1.SuspendLayout();
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
             this.splitContainer16.Panel1.SuspendLayout();
@@ -384,6 +396,7 @@
             this.splitContainer40.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -405,6 +418,7 @@
             this.AreasComunes.Controls.Add(this.tabPage5);
             this.AreasComunes.Controls.Add(this.tabPage7);
             this.AreasComunes.Controls.Add(this.tabPage4);
+            this.AreasComunes.Controls.Add(this.tabPage6);
             this.AreasComunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreasComunes.Location = new System.Drawing.Point(12, 12);
             this.AreasComunes.Name = "AreasComunes";
@@ -1231,10 +1245,10 @@
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.splitContainer11);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1211, 508);
+            this.tabPage3.Size = new System.Drawing.Size(1211, 511);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mantenimiento";
             // 
@@ -1255,8 +1269,8 @@
             // splitContainer11.Panel2
             // 
             this.splitContainer11.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer11.Size = new System.Drawing.Size(1205, 502);
-            this.splitContainer11.SplitterDistance = 417;
+            this.splitContainer11.Size = new System.Drawing.Size(1205, 505);
+            this.splitContainer11.SplitterDistance = 419;
             this.splitContainer11.TabIndex = 0;
             // 
             // lblTimeMan
@@ -1447,7 +1461,7 @@
             // splitContainer12.Panel2
             // 
             this.splitContainer12.Panel2.Controls.Add(this.splitContainer13);
-            this.splitContainer12.Size = new System.Drawing.Size(1205, 81);
+            this.splitContainer12.Size = new System.Drawing.Size(1205, 82);
             this.splitContainer12.SplitterDistance = 177;
             this.splitContainer12.TabIndex = 0;
             // 
@@ -1475,7 +1489,7 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.splitContainer14);
-            this.splitContainer13.Size = new System.Drawing.Size(1024, 81);
+            this.splitContainer13.Size = new System.Drawing.Size(1024, 82);
             this.splitContainer13.SplitterDistance = 340;
             this.splitContainer13.TabIndex = 0;
             // 
@@ -1502,7 +1516,7 @@
             // splitContainer14.Panel2
             // 
             this.splitContainer14.Panel2.Controls.Add(this.btnManEli);
-            this.splitContainer14.Size = new System.Drawing.Size(680, 81);
+            this.splitContainer14.Size = new System.Drawing.Size(680, 82);
             this.splitContainer14.SplitterDistance = 304;
             this.splitContainer14.TabIndex = 0;
             // 
@@ -1530,10 +1544,10 @@
             // 
             this.tabReuniones.BackColor = System.Drawing.SystemColors.Control;
             this.tabReuniones.Controls.Add(this.splitContainer15);
-            this.tabReuniones.Location = new System.Drawing.Point(4, 25);
+            this.tabReuniones.Location = new System.Drawing.Point(4, 22);
             this.tabReuniones.Name = "tabReuniones";
             this.tabReuniones.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReuniones.Size = new System.Drawing.Size(1211, 508);
+            this.tabReuniones.Size = new System.Drawing.Size(1211, 511);
             this.tabReuniones.TabIndex = 3;
             this.tabReuniones.Text = "Reuniones";
             // 
@@ -1552,17 +1566,26 @@
             // splitContainer15.Panel2
             // 
             this.splitContainer15.Panel2.Controls.Add(this.splitContainer16);
-            this.splitContainer15.Size = new System.Drawing.Size(1205, 502);
-            this.splitContainer15.SplitterDistance = 373;
+            this.splitContainer15.Size = new System.Drawing.Size(1205, 505);
+            this.splitContainer15.SplitterDistance = 375;
             this.splitContainer15.TabIndex = 0;
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.panel2);
+            this.groupBox5.Controls.Add(this.textBox3);
+            this.groupBox5.Controls.Add(this.label34);
+            this.groupBox5.Controls.Add(this.horaReunion);
+            this.groupBox5.Controls.Add(this.fechaReunion);
+            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.label32);
+            this.groupBox5.Controls.Add(this.label33);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox5.Location = new System.Drawing.Point(22, 32);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(405, 158);
+            this.groupBox5.Size = new System.Drawing.Size(524, 302);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reuniones";
@@ -1613,7 +1636,7 @@
             // splitContainer16.Panel2
             // 
             this.splitContainer16.Panel2.Controls.Add(this.splitContainer17);
-            this.splitContainer16.Size = new System.Drawing.Size(1205, 125);
+            this.splitContainer16.Size = new System.Drawing.Size(1205, 126);
             this.splitContainer16.SplitterDistance = 249;
             this.splitContainer16.TabIndex = 0;
             // 
@@ -1640,7 +1663,7 @@
             // splitContainer17.Panel2
             // 
             this.splitContainer17.Panel2.Controls.Add(this.splitContainer18);
-            this.splitContainer17.Size = new System.Drawing.Size(952, 125);
+            this.splitContainer17.Size = new System.Drawing.Size(952, 126);
             this.splitContainer17.SplitterDistance = 282;
             this.splitContainer17.TabIndex = 0;
             // 
@@ -1667,7 +1690,7 @@
             // splitContainer18.Panel2
             // 
             this.splitContainer18.Panel2.Controls.Add(this.btnReEli);
-            this.splitContainer18.Size = new System.Drawing.Size(666, 125);
+            this.splitContainer18.Size = new System.Drawing.Size(666, 126);
             this.splitContainer18.SplitterDistance = 335;
             this.splitContainer18.TabIndex = 0;
             // 
@@ -2358,6 +2381,106 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // horaReunion
+            // 
+            this.horaReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horaReunion.Location = new System.Drawing.Point(176, 73);
+            this.horaReunion.Name = "horaReunion";
+            this.horaReunion.Size = new System.Drawing.Size(200, 26);
+            this.horaReunion.TabIndex = 16;
+            // 
+            // fechaReunion
+            // 
+            this.fechaReunion.Location = new System.Drawing.Point(176, 36);
+            this.fechaReunion.Name = "fechaReunion";
+            this.fechaReunion.Size = new System.Drawing.Size(200, 26);
+            this.fechaReunion.TabIndex = 15;
+            this.fechaReunion.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(176, 117);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(307, 68);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(38, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Asistentes";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label32.Location = new System.Drawing.Point(39, 78);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 20);
+            this.label32.TabIndex = 12;
+            this.label32.Text = "Hora inicio";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label33.Location = new System.Drawing.Point(38, 41);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(54, 20);
+            this.label33.TabIndex = 11;
+            this.label33.Text = "Fecha";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(176, 207);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(307, 68);
+            this.textBox3.TabIndex = 18;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label34.Location = new System.Drawing.Point(38, 207);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(114, 20);
+            this.label34.TabIndex = 17;
+            this.label34.Text = "Observaciones";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1211, 511);
+            this.tabPage6.TabIndex = 10;
+            this.tabPage6.Text = "Reglamento";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label35);
+            this.panel2.Location = new System.Drawing.Point(256, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(211, 29);
+            this.panel2.TabIndex = 19;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(4, 4);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(57, 20);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "hh:mm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2479,6 +2602,8 @@
             this.splitContainer15.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
             this.splitContainer15.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.splitContainer16.Panel1.ResumeLayout(false);
             this.splitContainer16.Panel2.ResumeLayout(false);
@@ -2566,6 +2691,8 @@
             this.splitContainer40.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2741,6 +2868,17 @@
         private System.Windows.Forms.MonthCalendar mntCalendar;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.DateTimePicker horaReunion;
+        private System.Windows.Forms.DateTimePicker fechaReunion;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TabPage tabPage6;
         
 
     }
