@@ -118,13 +118,19 @@ namespace SAAR.Negocio
 
 
     /*----------------Manteniemiento-----------------------*/
-       public void insertarManteniemiento(string idEmpleado, string idAreaComun, string fechaMant, string obser, string costo, string tiempo)
+       public void insertarManteniemiento(string nombreCleinte, string AreaComun, string fechaMant, string obser, string costo, string tiempo)
 
        {
-
+           //id area comun
+           string idAreaComun;
+           DataTable DTA = cst.consultar("select IDAREACOMUN from AREACOMUN where NOMBREAREA='" + AreaComun + "'");
+           idAreaComun = DTA.Rows[0][0].ToString();
+           //idEMpleado
+           string idEmpleado;
+           DataTable DT = cst.consultar("select IDPERSONAL from PERSONAL where APELLIDO = '" + nombreCleinte + "'");
+           idEmpleado = DT.Rows[0][0].ToString();
            cst.counsultaTodoTipo("insert into MANTENIMIENTO values("+idEmpleado+","+idAreaComun+","+fechaMant+",'"+obser+"',cast("+costo+"as money),'"+tiempo+"')");
        }
-
        /*------------------Propietario---------------------*/
        /*Insertar*/
        public void insertarPropietario(string cedula, string Apellido, string Nombre)

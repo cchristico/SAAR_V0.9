@@ -49,15 +49,15 @@ namespace CapaPresentacion
             dtbMant.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             /* fechas y tiempo*/
             dtTimer.Format = DateTimePickerFormat.Custom;
-            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+            tiempoMante.Format = DateTimePickerFormat.Custom;
             dtTimer.CustomFormat = "HH : mm";
             dtTimer1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+            tiempoMante.Format = DateTimePickerFormat.Custom;
             dtTimer1.CustomFormat = "HH : mm";
 
-            dateTimePicker3.CustomFormat = "HH : mm";
+            tiempoMante.CustomFormat = "HH : mm";
             fechaMant.Format = DateTimePickerFormat.Custom;
-            fechaMant.CustomFormat = "MMM dd yyyy";
+            fechaMant.CustomFormat = "yyy MM dd";
             /*Propietario*/
             DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
             dataGridPropietario.DataSource = DTProp;
@@ -539,9 +539,16 @@ namespace CapaPresentacion
 
         private void btnManIng_Click(object sender, EventArgs e)
         {
-            string fechaMantenimiento;
+                string fechaMantenimiento;
+                fechaMant.CustomFormat = "yyy MM dd";
                 fechaMantenimiento = fechaMant.ToString().Substring(43, 11);
-                MessageBox.Show(fechaMantenimiento);
+                
+                string horaMant;
+                horaMant = tiempoMante.ToString().Substring(54, 6);
+            MessageBox.Show(fechaMantenimiento+"\n"+horaMant);
+            //string nombreCleinte, string AreaComun, string fechaMant, string obser, string costo, string tiempo
+            valCons.insertarManteniemiento(cmbEmpleado.SelectedItem.ToString(), cmbAreaComun.SelectedItem.ToString(), fechaMantenimiento, txtMantObs.Text.ToString(), txtMantCosto.Text.ToString(), horaMant);
+
         }
         //----------------------Propietario--------------------------------
         private void button4_Click(object sender, EventArgs e)
@@ -596,6 +603,12 @@ namespace CapaPresentacion
             txtPersonalNombre.Clear(); txtPersonalCedula.Clear();
             DataTable DTProp = cts.consultar("select IDPROP as ID, CIPROP as Cedula,APELLIDOPROP as Apellido, NOMBREPROP as Nombre from PROPIETARIOS");
             dataGridPropietario.DataSource = DTProp;
+        }
+        /*Manteniemietno*/
+
+        private void dtbMant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
     }

@@ -108,11 +108,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.fechaMant = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMantObs = new System.Windows.Forms.TextBox();
+            this.txtMantCosto = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.tiempoMante = new System.Windows.Forms.DateTimePicker();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -195,10 +195,10 @@
             this.splitContainer40 = new System.Windows.Forms.SplitContainer();
             this.btnCancelarProp = new System.Windows.Forms.Button();
             this.btnEliminarProp = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1274,10 +1274,10 @@
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.fechaMant);
             this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txtMantObs);
+            this.groupBox4.Controls.Add(this.txtMantCosto);
             this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.tiempoMante);
             this.groupBox4.Controls.Add(this.cmbEmpleado);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
@@ -1327,20 +1327,20 @@
             this.label22.TabIndex = 9;
             this.label22.Text = "Fecha";
             // 
-            // textBox3
+            // txtMantObs
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 221);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 97);
-            this.textBox3.TabIndex = 8;
+            this.txtMantObs.Location = new System.Drawing.Point(143, 221);
+            this.txtMantObs.Multiline = true;
+            this.txtMantObs.Name = "txtMantObs";
+            this.txtMantObs.Size = new System.Drawing.Size(248, 97);
+            this.txtMantObs.TabIndex = 8;
             // 
-            // textBox1
+            // txtMantCosto
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 7;
+            this.txtMantCosto.Location = new System.Drawing.Point(143, 175);
+            this.txtMantCosto.Name = "txtMantCosto";
+            this.txtMantCosto.Size = new System.Drawing.Size(100, 26);
+            this.txtMantCosto.TabIndex = 7;
             // 
             // panel3
             // 
@@ -1360,13 +1360,13 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "hh:mm";
             // 
-            // dateTimePicker3
+            // tiempoMante
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(143, 132);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker3.TabIndex = 5;
+            this.tiempoMante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiempoMante.Location = new System.Drawing.Point(143, 132);
+            this.tiempoMante.Name = "tiempoMante";
+            this.tiempoMante.Size = new System.Drawing.Size(200, 26);
+            this.tiempoMante.TabIndex = 5;
             // 
             // cmbEmpleado
             // 
@@ -1432,6 +1432,7 @@
             this.dtbMant.Name = "dtbMant";
             this.dtbMant.Size = new System.Drawing.Size(706, 210);
             this.dtbMant.TabIndex = 0;
+            this.dtbMant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtbMant_CellContentClick);
             // 
             // splitContainer12
             // 
@@ -2339,14 +2340,6 @@
             this.btnEliminarProp.UseVisualStyleBackColor = true;
             this.btnEliminarProp.Click += new System.EventHandler(this.btnEliminarProp_Click);
             // 
-            // pROPIETARIOSBindingSource
-            // 
-            this.pROPIETARIOSBindingSource.DataMember = "PROPIETARIOS";
-            // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -2356,6 +2349,14 @@
             this.tabPage4.Size = new System.Drawing.Size(1211, 508);
             this.tabPage4.TabIndex = 9;
             this.tabPage4.Text = "Reportes";
+            // 
+            // pROPIETARIOSBindingSource
+            // 
+            this.pROPIETARIOSBindingSource.DataMember = "PROPIETARIOS";
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -2661,11 +2662,11 @@
         private System.Windows.Forms.ComboBox cmbActivo;
         private System.Windows.Forms.BindingSource aCTIVOSBindingSource3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMantObs;
+        private System.Windows.Forms.TextBox txtMantCosto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker tiempoMante;
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
