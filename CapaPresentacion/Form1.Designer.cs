@@ -130,6 +130,16 @@
             this.tabReuniones = new System.Windows.Forms.TabPage();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.horaReunion = new System.Windows.Forms.DateTimePicker();
+            this.fechaReunion = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,20 +206,18 @@
             this.btnCancelarProp = new System.Windows.Forms.Button();
             this.btnEliminarProp = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aCTIVOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.horaReunion = new System.Windows.Forms.DateTimePicker();
-            this.fechaReunion = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
+            this.splitContainer41 = new System.Windows.Forms.SplitContainer();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.rdoReporteEstadoActivos = new System.Windows.Forms.RadioButton();
+            this.rdoReporteMantenimiento = new System.Windows.Forms.RadioButton();
+            this.rdoReporteReunione = new System.Windows.Forms.RadioButton();
+            this.rdoReporteUsoAreas = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.AreasComunes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -312,6 +320,7 @@
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
             this.splitContainer16.Panel1.SuspendLayout();
@@ -394,9 +403,14 @@
             this.splitContainer40.Panel1.SuspendLayout();
             this.splitContainer40.Panel2.SuspendLayout();
             this.splitContainer40.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer41)).BeginInit();
+            this.splitContainer41.Panel1.SuspendLayout();
+            this.splitContainer41.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1245,10 +1259,10 @@
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.splitContainer11);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1211, 511);
+            this.tabPage3.Size = new System.Drawing.Size(1211, 508);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mantenimiento";
             // 
@@ -1269,8 +1283,8 @@
             // splitContainer11.Panel2
             // 
             this.splitContainer11.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer11.Size = new System.Drawing.Size(1205, 505);
-            this.splitContainer11.SplitterDistance = 419;
+            this.splitContainer11.Size = new System.Drawing.Size(1205, 502);
+            this.splitContainer11.SplitterDistance = 416;
             this.splitContainer11.TabIndex = 0;
             // 
             // lblTimeMan
@@ -1544,10 +1558,10 @@
             // 
             this.tabReuniones.BackColor = System.Drawing.SystemColors.Control;
             this.tabReuniones.Controls.Add(this.splitContainer15);
-            this.tabReuniones.Location = new System.Drawing.Point(4, 22);
+            this.tabReuniones.Location = new System.Drawing.Point(4, 25);
             this.tabReuniones.Name = "tabReuniones";
             this.tabReuniones.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReuniones.Size = new System.Drawing.Size(1211, 511);
+            this.tabReuniones.Size = new System.Drawing.Size(1211, 508);
             this.tabReuniones.TabIndex = 3;
             this.tabReuniones.Text = "Reuniones";
             // 
@@ -1566,8 +1580,8 @@
             // splitContainer15.Panel2
             // 
             this.splitContainer15.Panel2.Controls.Add(this.splitContainer16);
-            this.splitContainer15.Size = new System.Drawing.Size(1205, 505);
-            this.splitContainer15.SplitterDistance = 375;
+            this.splitContainer15.Size = new System.Drawing.Size(1205, 502);
+            this.splitContainer15.SplitterDistance = 372;
             this.splitContainer15.TabIndex = 0;
             // 
             // groupBox5
@@ -1589,6 +1603,96 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reuniones";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label35);
+            this.panel2.Location = new System.Drawing.Point(256, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(211, 29);
+            this.panel2.TabIndex = 19;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(4, 4);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(57, 20);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "hh:mm";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(176, 207);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(307, 68);
+            this.textBox3.TabIndex = 18;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label34.Location = new System.Drawing.Point(38, 207);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(114, 20);
+            this.label34.TabIndex = 17;
+            this.label34.Text = "Observaciones";
+            // 
+            // horaReunion
+            // 
+            this.horaReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horaReunion.Location = new System.Drawing.Point(176, 73);
+            this.horaReunion.Name = "horaReunion";
+            this.horaReunion.Size = new System.Drawing.Size(200, 26);
+            this.horaReunion.TabIndex = 16;
+            // 
+            // fechaReunion
+            // 
+            this.fechaReunion.Location = new System.Drawing.Point(176, 36);
+            this.fechaReunion.Name = "fechaReunion";
+            this.fechaReunion.Size = new System.Drawing.Size(200, 26);
+            this.fechaReunion.TabIndex = 15;
+            this.fechaReunion.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(176, 117);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(307, 68);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(38, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Asistentes";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label32.Location = new System.Drawing.Point(39, 78);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 20);
+            this.label32.TabIndex = 12;
+            this.label32.Text = "Hora inicio";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label33.Location = new System.Drawing.Point(38, 41);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(54, 20);
+            this.label33.TabIndex = 11;
+            this.label33.Text = "Fecha";
             // 
             // dataGridView3
             // 
@@ -2201,7 +2305,7 @@
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox7.Location = new System.Drawing.Point(15, 16);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(424, 167);
+            this.groupBox7.Size = new System.Drawing.Size(423, 164);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Propietarios:";
@@ -2366,12 +2470,23 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage4.Controls.Add(this.splitContainer41);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1211, 508);
             this.tabPage4.TabIndex = 9;
             this.tabPage4.Text = "Reportes";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1211, 508);
+            this.tabPage6.TabIndex = 10;
+            this.tabPage6.Text = "Reglamento";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // pROPIETARIOSBindingSource
             // 
@@ -2381,105 +2496,99 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // horaReunion
+            // splitContainer41
             // 
-            this.horaReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horaReunion.Location = new System.Drawing.Point(176, 73);
-            this.horaReunion.Name = "horaReunion";
-            this.horaReunion.Size = new System.Drawing.Size(200, 26);
-            this.horaReunion.TabIndex = 16;
+            this.splitContainer41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer41.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer41.Name = "splitContainer41";
             // 
-            // fechaReunion
+            // splitContainer41.Panel1
             // 
-            this.fechaReunion.Location = new System.Drawing.Point(176, 36);
-            this.fechaReunion.Name = "fechaReunion";
-            this.fechaReunion.Size = new System.Drawing.Size(200, 26);
-            this.fechaReunion.TabIndex = 15;
-            this.fechaReunion.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            this.splitContainer41.Panel1.Controls.Add(this.panel7);
+            this.splitContainer41.Size = new System.Drawing.Size(1205, 502);
+            this.splitContainer41.SplitterDistance = 817;
+            this.splitContainer41.TabIndex = 0;
             // 
-            // textBox1
+            // panel7
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 117);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 68);
-            this.textBox1.TabIndex = 14;
+            this.panel7.Controls.Add(this.groupBox8);
+            this.panel7.Location = new System.Drawing.Point(68, 27);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(541, 348);
+            this.panel7.TabIndex = 1;
             // 
-            // label9
+            // groupBox8
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(38, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 20);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Asistentes";
+            this.groupBox8.Controls.Add(this.label36);
+            this.groupBox8.Controls.Add(this.rdoReporteEstadoActivos);
+            this.groupBox8.Controls.Add(this.rdoReporteMantenimiento);
+            this.groupBox8.Controls.Add(this.rdoReporteReunione);
+            this.groupBox8.Controls.Add(this.rdoReporteUsoAreas);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(14, 14);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(326, 268);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Reportes a generar";
             // 
-            // label32
+            // label36
             // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(39, 78);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(83, 20);
-            this.label32.TabIndex = 12;
-            this.label32.Text = "Hora inicio";
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(20, 33);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(122, 16);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Escoja una opción:";
             // 
-            // label33
+            // rdoReporteEstadoActivos
             // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(38, 41);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 20);
-            this.label33.TabIndex = 11;
-            this.label33.Text = "Fecha";
+            this.rdoReporteEstadoActivos.AutoSize = true;
+            this.rdoReporteEstadoActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoReporteEstadoActivos.Location = new System.Drawing.Point(76, 208);
+            this.rdoReporteEstadoActivos.Name = "rdoReporteEstadoActivos";
+            this.rdoReporteEstadoActivos.Size = new System.Drawing.Size(206, 20);
+            this.rdoReporteEstadoActivos.TabIndex = 3;
+            this.rdoReporteEstadoActivos.TabStop = true;
+            this.rdoReporteEstadoActivos.Text = "Reporte de Estado de Activos";
+            this.rdoReporteEstadoActivos.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // rdoReporteMantenimiento
             // 
-            this.textBox3.Location = new System.Drawing.Point(176, 207);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(307, 68);
-            this.textBox3.TabIndex = 18;
+            this.rdoReporteMantenimiento.AutoSize = true;
+            this.rdoReporteMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoReporteMantenimiento.Location = new System.Drawing.Point(76, 160);
+            this.rdoReporteMantenimiento.Name = "rdoReporteMantenimiento";
+            this.rdoReporteMantenimiento.Size = new System.Drawing.Size(184, 20);
+            this.rdoReporteMantenimiento.TabIndex = 2;
+            this.rdoReporteMantenimiento.TabStop = true;
+            this.rdoReporteMantenimiento.Text = "Reporte de mantenimiento";
+            this.rdoReporteMantenimiento.UseVisualStyleBackColor = true;
             // 
-            // label34
+            // rdoReporteReunione
             // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(38, 207);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(114, 20);
-            this.label34.TabIndex = 17;
-            this.label34.Text = "Observaciones";
+            this.rdoReporteReunione.AutoSize = true;
+            this.rdoReporteReunione.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoReporteReunione.Location = new System.Drawing.Point(76, 113);
+            this.rdoReporteReunione.Name = "rdoReporteReunione";
+            this.rdoReporteReunione.Size = new System.Drawing.Size(156, 20);
+            this.rdoReporteReunione.TabIndex = 1;
+            this.rdoReporteReunione.TabStop = true;
+            this.rdoReporteReunione.Text = "Reporte de reuniones";
+            this.rdoReporteReunione.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // rdoReporteUsoAreas
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1211, 511);
-            this.tabPage6.TabIndex = 10;
-            this.tabPage6.Text = "Reglamento";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label35);
-            this.panel2.Location = new System.Drawing.Point(256, 70);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 29);
-            this.panel2.TabIndex = 19;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(4, 4);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(57, 20);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "hh:mm";
+            this.rdoReporteUsoAreas.AutoSize = true;
+            this.rdoReporteUsoAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoReporteUsoAreas.Location = new System.Drawing.Point(76, 70);
+            this.rdoReporteUsoAreas.Name = "rdoReporteUsoAreas";
+            this.rdoReporteUsoAreas.Size = new System.Drawing.Size(180, 20);
+            this.rdoReporteUsoAreas.TabIndex = 0;
+            this.rdoReporteUsoAreas.TabStop = true;
+            this.rdoReporteUsoAreas.Text = "Reporte de Uso de Areas";
+            this.rdoReporteUsoAreas.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2604,6 +2713,8 @@
             this.splitContainer15.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.splitContainer16.Panel1.ResumeLayout(false);
             this.splitContainer16.Panel2.ResumeLayout(false);
@@ -2689,10 +2800,15 @@
             this.splitContainer40.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer40)).EndInit();
             this.splitContainer40.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCTIVOSBindingSource3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.splitContainer41.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer41)).EndInit();
+            this.splitContainer41.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2879,6 +2995,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.SplitContainer splitContainer41;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.RadioButton rdoReporteEstadoActivos;
+        private System.Windows.Forms.RadioButton rdoReporteMantenimiento;
+        private System.Windows.Forms.RadioButton rdoReporteReunione;
+        private System.Windows.Forms.RadioButton rdoReporteUsoAreas;
         
 
     }
